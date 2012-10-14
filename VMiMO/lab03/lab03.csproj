@@ -46,9 +46,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\labs.shared\labs.shared.csproj">
       <Project>{DB79348D-41F7-4DBA-A8FD-648331B5F35F}</Project>
       <Name>labs</Name>
