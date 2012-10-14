@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<?xml-stylesheet href="goods.xsl" type="text/xsl"?>
+<goods>
+	<good ID="GSM">
+		<type ID="Nokia">
+			<code>100001</code>
+			<model>3310</model>
+			<price>40</price>
+		</type>
+		<type ID="Sony Ericsson">
+			<code>100002</code>
+			<model>T630</model>
+			<price>150</price>
+		</type>
+	</good>
+	<good ID="TV">
+		<type ID="Horizont">
+			<code>100003</code>
+			<model>modellll</model>
+			<price>170</price>
+		</type>
+		<type ID="Vityaz">
+			<code>100004</code>
+			<model>Europe</model>
+			<price>185</price>
+		</type>
+	</good>
+	<good ID="computer">
+		<type ID="Dell">
+			<code>100005</code>
+			<model>Computers</model>
+			<price>999</price>
+	</type>
+		<type ID="Apple">
+			<code>100006</code>
+			<model>Macintosh</model>
+			<price>1999</price>
+		</type>
+	</good>
+</goods>
