@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:axis2="http://kot01/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns0="http://kot01/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://kot01/">
+    <wsdl:documentation>LibraryService</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema xmlns:ns="http://kot01/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://kot01/xsd">
+            <xs:element name="FindBooksByAuthor">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="author" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="FindBooksByAuthorResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="ns:Book"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="Book">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="author" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="pages" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="title" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="year" nillable="true" type="xs:int"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="GetBooksResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="ns:Book"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="AddBook">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="book" nillable="true" type="ns:Book"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="DeleteBook">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="book" nillable="true" type="ns:Book"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="DeleteBookRequest">
+        <wsdl:part name="parameters" element="ns0:DeleteBook"/>
+    </wsdl:message>
+    <wsdl:message name="AddBookRequest">
+        <wsdl:part name="parameters" element="ns0:AddBook"/>
+    </wsdl:message>
+    <wsdl:message name="GetBooksRequest"/>
+    <wsdl:message name="GetBooksResponse">
+        <wsdl:part name="parameters" element="ns0:GetBooksResponse"/>
+    </wsdl:message>
+    <wsdl:message name="FindBooksByAuthorRequest">
+        <wsdl:part name="parameters" element="ns0:FindBooksByAuthor"/>
+    </wsdl:message>
+    <wsdl:message name="FindBooksByAuthorResponse">
+        <wsdl:part name="parameters" element="ns0:FindBooksByAuthorResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="LibraryServicePortType">
+        <wsdl:operation name="DeleteBook">
+            <wsdl:input message="axis2:DeleteBookRequest" wsaw:Action="urn:DeleteBook"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddBook">
+            <wsdl:input message="axis2:AddBookRequest" wsaw:Action="urn:AddBook"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetBooks">
+            <wsdl:input message="axis2:GetBooksRequest" wsaw:Action="urn:GetBooks"/>
+            <wsdl:output message="axis2:GetBooksResponse" wsaw:Action="urn:GetBooksResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="FindBooksByAuthor">
+            <wsdl:input message="axis2:FindBooksByAuthorRequest" wsaw:Action="urn:FindBooksByAuthor"/>
+            <wsdl:output message="axis2:FindBooksByAuthorResponse" wsaw:Action="urn:FindBooksByAuthorResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="LibraryServiceSOAP11Binding" type="axis2:LibraryServicePortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="DeleteBook">
+            <soap:operation soapAction="urn:DeleteBook" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="AddBook">
+            <soap:operation soapAction="urn:AddBook" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="GetBooks">
+            <soap:operation soapAction="urn:GetBooks" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="FindBooksByAuthor">
+            <soap:operation soapAction="urn:FindBooksByAuthor" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="LibraryServiceSOAP12Binding" type="axis2:LibraryServicePortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="DeleteBook">
+            <soap12:operation soapAction="urn:DeleteBook" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="AddBook">
+            <soap12:operation soapAction="urn:AddBook" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="GetBooks">
+            <soap12:operation soapAction="urn:GetBooks" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="FindBooksByAuthor">
+            <soap12:operation soapAction="urn:FindBooksByAuthor" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="LibraryServiceHttpBinding" type="axis2:LibraryServicePortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="DeleteBook">
+            <http:operation location="LibraryService/DeleteBook"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="AddBook">
+            <http:operation location="LibraryService/AddBook"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+        </wsdl:operation>
+        <wsdl:operation name="GetBooks">
+            <http:operation location="LibraryService/GetBooks"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="FindBooksByAuthor">
+            <http:operation location="LibraryService/FindBooksByAuthor"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="LibraryService">
+        <wsdl:port name="LibraryServiceSOAP11port_http" binding="axis2:LibraryServiceSOAP11Binding">
+            <soap:address location="http://localhost:8084/axis2/services/LibraryService.LibraryServiceSOAP11port_http/"/>
+        </wsdl:port>
+        <wsdl:port name="LibraryServiceSOAP12port_http" binding="axis2:LibraryServiceSOAP12Binding">
+            <soap12:address location="http://localhost:8084/axis2/services/LibraryService.LibraryServiceSOAP12port_http/"/>
+        </wsdl:port>
+        <wsdl:port name="LibraryServiceHttpport" binding="axis2:LibraryServiceHttpBinding">
+            <http:address location="http://localhost:8084/axis2/services/LibraryService.LibraryServiceHttpport/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

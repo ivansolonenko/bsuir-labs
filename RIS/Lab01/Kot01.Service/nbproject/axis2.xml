@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axis2 xmlns="http://www.netbeans.org/ns/axis2/1">
+    <service name="LibraryService">
+        <service-class>kot01.LibraryService</service-class>
+        <generate-wsdl targetNamespace="http://kot01/" schemaNamespace="http://kot01/xsd"/>
+    </service>
+</axis2>
