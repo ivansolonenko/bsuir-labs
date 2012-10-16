@@ -11,7 +11,7 @@ public class LibraryServlet extends GenericServlet {
     map.put("Index".toUpperCase(), Index.class);
     map.put("AddBook".toUpperCase(), AddBook.class);
     map.put("DeleteBook".toUpperCase(), DeleteBook.class);
-    map.put("FindBookByAuthor".toUpperCase(), FindBookByAuthor.class);
+    map.put("FindBooksByAuthor".toUpperCase(), FindBooksByAuthor.class);
     map.put("GetBooks".toUpperCase(), GetBooks.class);
     return map;
   }

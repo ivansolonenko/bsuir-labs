@@ -1,18 +1,19 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags/" %>
 <t:MasterPage>
   <jsp:body>
     <form action="/kot01/library/GetBooks" method="post" style="display: inline; float: left; padding-right: 4px;">
       <input type="submit" value="Show All" class="btn" />
     </form>
-    <form action="/kot01/library/FindBookByAuthor" class="form-search" method="post">
+    <form action="/kot01/library/FindBooksByAuthor" class="form-search" method="post">
       <input type="text" class="input-medium search-query" id="auhtor" name="author"/>
       <input type="submit" class="btn" value="Search"/>
     </form>
     <div style="clear: both;"></div>
     <c:choose>
-      <c:when test="${books == null || books.size() == 0}">
+      <c:when test="${books == null || fn:length(books) == 0}">
         <span class="error">Nothing Found</span>
       </c:when>
       <c:otherwise>

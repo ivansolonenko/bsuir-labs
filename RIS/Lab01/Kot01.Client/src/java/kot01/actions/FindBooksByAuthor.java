@@ -6,7 +6,7 @@ import kot01.Action;
 import kot01.LibraryService;
 import kot01.LibraryServicePortType;
 
-public class FindBookByAuthor implements Action {
+public class FindBooksByAuthor implements Action {
 
   @Override
   public String perform(HttpServletRequest request, HttpServletResponse response) {
