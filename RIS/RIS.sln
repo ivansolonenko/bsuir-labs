@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab03", "Lab03\Lab03.csproj", "{953D2BD9-2B46-4C5F-93E9-3E0AEA32B288}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab03", "Lab03\Lab03\Lab03.csproj", "{953D2BD9-2B46-4C5F-93E9-3E0AEA32B288}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab03.Individual", "Lab03\Lab03.Individual\Lab03.Individual.csproj", "{93B5CC37-C288-4D75-86FC-735D38FB4133}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kot03.Individual", "Lab03\Kot03.Individual\Kot03.Individual.csproj", "{FCC601AD-D616-403E-AC66-2EFE2624474A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,14 @@ Global
 		{953D2BD9-2B46-4C5F-93E9-3E0AEA32B288}.Debug|x86.Build.0 = Debug|x86
 		{953D2BD9-2B46-4C5F-93E9-3E0AEA32B288}.Release|x86.ActiveCfg = Release|x86
 		{953D2BD9-2B46-4C5F-93E9-3E0AEA32B288}.Release|x86.Build.0 = Release|x86
+		{93B5CC37-C288-4D75-86FC-735D38FB4133}.Debug|x86.ActiveCfg = Debug|x86
+		{93B5CC37-C288-4D75-86FC-735D38FB4133}.Debug|x86.Build.0 = Debug|x86
+		{93B5CC37-C288-4D75-86FC-735D38FB4133}.Release|x86.ActiveCfg = Release|x86
+		{93B5CC37-C288-4D75-86FC-735D38FB4133}.Release|x86.Build.0 = Release|x86
+		{FCC601AD-D616-403E-AC66-2EFE2624474A}.Debug|x86.ActiveCfg = Debug|x86
+		{FCC601AD-D616-403E-AC66-2EFE2624474A}.Debug|x86.Build.0 = Debug|x86
+		{FCC601AD-D616-403E-AC66-2EFE2624474A}.Release|x86.ActiveCfg = Release|x86
+		{FCC601AD-D616-403E-AC66-2EFE2624474A}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
