@@ -1,0 +1,1318 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="7795a16e-125a-4147-a1c8-d5eddee121d4" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Lab02</ID>
+  <Name>Lab02</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="40" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1705" scrolltop="9667" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="95" x="22913" y="13070" backcolor="15334399" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01cc0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="T_Employee" left="8284" top="8524" logicalid="20" controlid="1" masterid="0" hint1="0" hint2="0" width="3625" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000290e0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_T_Employee" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="T_SocialStatus" left="6309" top="19781" logicalid="21" controlid="2" masterid="0" hint1="0" hint2="0" width="3254" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b60c000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_T_SocialStatus" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="Facts" left="10767" top="13191" logicalid="22" controlid="3" masterid="0" hint1="0" hint2="0" width="4154" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800003a10000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Facts" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="T_WorkingExperience" left="3975" top="14751" logicalid="23" controlid="4" masterid="0" hint1="0" hint2="0" width="4392" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000800002811000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_T_WorkingExperience" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="T_Department" left="17321" top="14329" logicalid="24" controlid="5" masterid="0" hint1="0" hint2="0" width="3201" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000810c0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_T_Department" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="T_Citizenship" left="13356" top="9616" logicalid="25" controlid="6" masterid="0" hint1="0" hint2="0" width="3096" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000180c000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_T_Citizenship" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="T_PreviousWorkPlace" left="17321" top="19031" logicalid="26" controlid="7" masterid="0" hint1="0" hint2="0" width="4392" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="0008000028110000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_T_PreviousWorkPlace" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="T_HiringDismissal" left="4372" top="11794" logicalid="27" controlid="8" masterid="0" hint1="0" hint2="0" width="3334" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000060d0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_T_HiringDismissal" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="T_Region" left="17421" top="10050" logicalid="28" controlid="9" masterid="0" hint1="0" hint2="0" width="3000" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b80b000057070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_T_Region" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge.2" tooltip="T_Occupation" left="11963" top="19781" logicalid="29" controlid="10" masterid="0" hint1="0" hint2="0" width="3254" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="00080000b60c0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_T_Occupation" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="6740" top="9586" logicalid="30" controlid="11" masterid="0" hint1="0" hint2="0" width="1844" height="2708" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_T_Employee_HiringDismissal]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="1" sourceattachpoint="8" destattachpoint="18" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7139" y="11794" />
+              <point x="7139" y="9886" />
+              <point x="8284" y="9886" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="10797" top="10750" logicalid="31" controlid="12" masterid="0" hint1="0" hint2="0" width="799" height="2741" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Facts_Employee]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="3" sourceattachpoint="11" destattachpoint="0" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11196" y="11249" />
+              <point x="11196" y="12220" />
+              <point x="11194" y="12220" />
+              <point x="11194" y="13191" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8637" top="17891" logicalid="32" controlid="13" masterid="0" hint1="0" hint2="0" width="2857" height="2390" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Facts_SocialStatus]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="3" sourceattachpoint="8" destattachpoint="1" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="9036" y="19781" />
+              <point x="9036" y="18986" />
+              <point x="11194" y="18986" />
+              <point x="11194" y="18191" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="14621" top="14291" logicalid="33" controlid="14" masterid="0" hint1="0" hint2="0" width="3000" height="1589" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Facts_Department]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="3" sourceattachpoint="12" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="17321" y="15480" />
+              <point x="16121" y="15480" />
+              <point x="16121" y="14591" />
+              <point x="14921" y="14591" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="8067" top="15291" logicalid="34" controlid="15" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Facts_WorkingExperience]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="3" sourceattachpoint="17" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="8367" y="15690" />
+              <point x="9567" y="15690" />
+              <point x="9567" y="15691" />
+              <point x="10767" y="15691" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="14621" top="15941" logicalid="35" controlid="16" masterid="0" hint1="0" hint2="0" width="3000" height="4641" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Facts_PreviousWorkPlace]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="3" sourceattachpoint="16" destattachpoint="25" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="17321" y="20182" />
+              <point x="16121" y="20182" />
+              <point x="16121" y="16241" />
+              <point x="14921" y="16241" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="13405" top="10996" logicalid="36" controlid="17" masterid="0" hint1="0" hint2="0" width="839" height="2495" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Facts_Citizenship]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="3" sourceattachpoint="1" destattachpoint="10" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13804" y="11495" />
+              <point x="13804" y="12343" />
+              <point x="13944" y="12343" />
+              <point x="13944" y="13191" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="11994" top="17891" logicalid="37" controlid="18" masterid="0" hint1="0" hint2="0" width="896" height="2390" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Facts_Occupation]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="10" destid="3" sourceattachpoint="0" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="12490" y="19781" />
+              <point x="12490" y="18986" />
+              <point x="12294" y="18986" />
+              <point x="12294" y="18191" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="18522" top="11430" logicalid="38" controlid="19" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_T_Department_T_Region]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="5" sourceattachpoint="5" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="18921" y="11929" />
+              <point x="18921" y="14329" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1705</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>9667</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>3975</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>8524</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>95</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="d28d4c46-7469-4aae-b3e3-d8ad13169327">
+      <ID>T Employee</ID>
+      <Name>T Employee</Name>
+      <DimensionID>T Employee</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e9e7286f-54d3-4de0-9d63-ce3f5ee980a2">
+          <AttributeID>Employee Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7c2c6aa4-30cb-45a0-bc4a-ea4efb88e605">
+          <AttributeID>Hiringdismissal Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0dece023-1e7b-48fd-ae8c-df9241900175">
+          <AttributeID>Employee Surname</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cc2bb4b2-a3f7-4458-84ac-8467cff5d662">
+          <AttributeID>Employee Name</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="8bc59f3f-fb4b-4dfe-9e12-91addd9014ce">
+      <ID>T Department</ID>
+      <Name>T Department</Name>
+      <DimensionID>T Department</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="8c96804b-b237-492f-b3a8-a4cc255b99ac">
+          <AttributeID>Department Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bdef7459-5180-492e-8995-14f9b1389a8c">
+          <AttributeID>Region Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ee499cb1-1670-4f66-a818-232d1a14c736">
+          <AttributeID>Department Title</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="a57fd9d3-363d-4173-a70a-de41408ce9d8">
+      <ID>T Working Experience</ID>
+      <Name>T Working Experience</Name>
+      <DimensionID>T Working Experience</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="7a2c5744-97d9-4cec-aaf3-a3e4d6bac90f">
+          <AttributeID>Workingexperience Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="52aa4ada-31c0-4ead-a391-839a8a7c8142">
+          <AttributeID>Workingexperience Years</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="899b5d28-4d50-4896-9b7b-cf6706598265">
+      <ID>T Previous Work Place</ID>
+      <Name>T Previous Work Place</Name>
+      <DimensionID>T Previous Work Place</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="908aa8d5-568c-432d-a19d-968297b4a9be">
+          <AttributeID>Previousworkplace Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cd398ca7-ad73-4f9a-ae84-600843cfa162">
+          <AttributeID>Previousworkplace Title</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="608c76c7-184f-4c19-8de5-978604f961f1">
+          <AttributeID>Previousworkplace Years</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="d11daff9-a5fb-463b-8ea3-0e17c27e758b">
+      <ID>T Citizenship</ID>
+      <Name>T Citizenship</Name>
+      <DimensionID>T Citizenship</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="384d30b3-34e0-42dd-92f2-c6ed777d4818">
+          <AttributeID>Citizenship Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1adf20ce-7f62-4af3-85e6-4b9ba07a3644">
+          <AttributeID>Citizenship Title</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ae290111-2706-49c9-b289-7c67dcc08ac1">
+      <ID>T Social Status</ID>
+      <Name>T Social Status</Name>
+      <DimensionID>T Social Status</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="298d79db-46e7-46ed-baf1-9fe36022b4a2">
+          <AttributeID>Socialstatus Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0a248914-b24b-4ea4-9e7d-58a3282dd085">
+          <AttributeID>Socialstatus Title</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="681465ed-bec1-451a-8fda-709a23071a36">
+      <ID>T Occupation</ID>
+      <Name>T Occupation</Name>
+      <DimensionID>T Occupation</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4baa3917-80c5-4cd4-a181-2a1b0b1150a9">
+          <AttributeID>Occupation Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5c3966c9-998a-455c-b83a-1504edc401c0">
+          <AttributeID>Occupation Title</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d4c9d597-63ce-4e78-b46a-fc49b4386837">
+          <AttributeID>Occupation Rate</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="4d2f71cf-7ea9-4752-98e4-45ff941936ec">
+      <ID>T Region</ID>
+      <Name>T Region</Name>
+      <DimensionID>T Region</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9eb76f85-1a85-4e9f-9227-62a737e8d609">
+          <AttributeID>Region Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d7d1a249-7cee-43c7-a07a-58a674f16762">
+          <AttributeID>Region Title</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="a207bf90-54d1-4d9e-b18d-108595f07267">
+      <ID>T Hiring Dismissal</ID>
+      <Name>T Hiring Dismissal</Name>
+      <DimensionID>T Hiring Dismissal</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="91ceb4ad-5f49-4b96-b664-659fee64e152">
+          <AttributeID>Hiringdismissal Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2f3cfa2a-d1c7-4c39-87eb-a45cb1da4f39">
+          <AttributeID>Hiring Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="339beb1d-b205-4693-bae2-81bcd2be508e">
+          <AttributeID>Dismissal Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ea82d304-45fb-4c16-8461-c16a70de3e4a">
+      <ID>T Employee - Hiringdismissal</ID>
+      <Name>T Employee - Hiringdismissal</Name>
+      <DimensionID>T Hiring Dismissal</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a7c3dfd2-c35b-4b65-a92d-d593ec53e836">
+          <AttributeID>Hiringdismissal Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="74fca12d-0698-4ab7-848d-4a5f94af21ee">
+          <AttributeID>Hiring Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f78e809f-31c2-41cc-be90-196ee42b77b8">
+          <AttributeID>Dismissal Date</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ee1f9192-e2d7-4cea-b5bb-f674ac1f4e1e">
+      <ID>T Department - Region</ID>
+      <Name>T Department - Region</Name>
+      <DimensionID>T Region</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="26af39d9-a7c6-46c7-950f-515d4b227298">
+          <AttributeID>Region Id</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="09855814-9a5c-461c-9918-ece1a4f2c982">
+          <AttributeID>Region Title</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="243424fd-53e9-45a0-b70a-4aecca9eb5d5">
+      <ID>Facts</ID>
+      <Name>Facts</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="1784802b-63cf-47c0-ab7e-7a99f1060593">
+          <ID>Age</ID>
+          <Name>Age</Name>
+          <Source dwd:design-time-name="501862a3-5695-4ea1-9357-23027d887a1a">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e18a1c24-e7f2-4fda-8147-0db5a7df73b4">
+              <TableID>dbo_Facts</TableID>
+              <ColumnID>age</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a45315c0-4158-4535-9d77-f19ab7418d39">
+          <ID>Vacationdays Total</ID>
+          <Name>Vacationdays Total</Name>
+          <Source dwd:design-time-name="a5f1a6f1-1f99-4d1e-b293-ee5f48c8c6cb">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f61c03a8-319a-4ab5-978c-9c075a7eb45c">
+              <TableID>dbo_Facts</TableID>
+              <ColumnID>vacationdays_total</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ef55e646-dab5-4d18-91b4-7a0818dec732">
+          <ID>Vacationdays Available</ID>
+          <Name>Vacationdays Available</Name>
+          <Source dwd:design-time-name="ed3a553e-8038-42b8-a896-844827641663">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="9325064f-5a74-45dc-8f91-d6fcb2b46464">
+              <TableID>dbo_Facts</TableID>
+              <ColumnID>vacationdays_available</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="20022ad0-a0c4-4939-8ff7-5439f64f43e6">
+          <ID>Vacationdays Spent</ID>
+          <Name>Vacationdays Spent</Name>
+          <Source dwd:design-time-name="07df1f24-61cb-48a8-9ec3-117a9e720cdf">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a9edb832-e4ca-4aca-a20b-819909ff5bf3">
+              <TableID>dbo_Facts</TableID>
+              <ColumnID>vacationdays_spent</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="d1dfb6d1-cc1f-4e3c-bddc-fb31e9a86ad4">
+          <ID>Sickdays Thisyear</ID>
+          <Name>Sickdays Thisyear</Name>
+          <Source dwd:design-time-name="de8f3a51-0c04-48cf-8b88-6eb4950946d6">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ea233e3e-2fb2-473f-bbe1-b8bbed60c3bf">
+              <TableID>dbo_Facts</TableID>
+              <ColumnID>sickdays_thisyear</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="3653a3da-4cdf-48ff-b4e2-07133a60b7fc">
+          <ID>Rebukes Amount</ID>
+          <Name>Rebukes Amount</Name>
+          <Source dwd:design-time-name="c9d6f61a-701a-4b05-b462-6040f014c696">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cdafbca4-08cf-4317-ac8e-e66023fc71e0">
+              <TableID>dbo_Facts</TableID>
+              <ColumnID>rebukes_amount</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c886eb45-0be1-461e-8f15-512388c9e900">
+          <ID>Businesstrips Amount</ID>
+          <Name>Businesstrips Amount</Name>
+          <Source dwd:design-time-name="61967843-627a-4fdc-92d5-58edebe59c04">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="20bdc558-059c-42be-9fab-339509382faa">
+              <TableID>dbo_Facts</TableID>
+              <ColumnID>businesstrips_amount</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="071d9b79-b220-4d84-8a61-5f2b9265148e">
+          <ID>Facts Count</ID>
+          <Name>Facts Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="32d81a99-973c-4256-88c4-c3ff27344e9c">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="adaeadea-ff15-4189-a8c0-9a068bce8652">
+              <TableID>dbo_Facts</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ade629cd-a323-4ba9-be3d-db0666c57194">
+          <CubeDimensionID>T Employee</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="233399cb-47c6-4a34-88ed-084070a6c9af">
+              <AttributeID>Employee Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="204be0b2-0e0f-4eb1-a281-69274f47506e">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4f2155b6-69f3-493d-ad89-5297c86799aa">
+                    <TableID>dbo_Facts</TableID>
+                    <ColumnID>employee_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="23c9492f-a047-4d2a-9ce5-db7642225980">
+          <CubeDimensionID>T Department</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5ca68abe-cb61-425c-9dde-7734cbf83b17">
+              <AttributeID>Department Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8f042d93-dca7-4bb1-b146-11446b2cc75e">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c915b0ed-9092-40b2-b0ea-28cba368e7fc">
+                    <TableID>dbo_Facts</TableID>
+                    <ColumnID>department_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f3aa9d86-c6df-461a-af7f-223452ce81a0">
+          <CubeDimensionID>T Working Experience</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3d7cbf74-5aa4-4cbe-a7e0-71101f4d94ce">
+              <AttributeID>Workingexperience Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c7ee77e3-c14f-4e64-81d2-fb1040d76798">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a8a68660-65e4-4efa-88fa-d7d8fd971e72">
+                    <TableID>dbo_Facts</TableID>
+                    <ColumnID>workingexperience_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="1c3e9bbf-a353-4320-b329-6b41fe035e04">
+          <CubeDimensionID>T Previous Work Place</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0437acf5-1429-4ec9-a7bd-94bf61119dce">
+              <AttributeID>Previousworkplace Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a53d77ee-0d39-41e4-bea8-f13d232ed8bc">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1e0318a3-2c9b-4378-bd32-fed026ba4071">
+                    <TableID>dbo_Facts</TableID>
+                    <ColumnID>previousworkplace_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9ccbc560-5de9-4327-9167-4e76bd29f0c1">
+          <CubeDimensionID>T Citizenship</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6edbd485-bb7d-4b68-b5e4-ad3a55e74f79">
+              <AttributeID>Citizenship Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3e55c251-190b-4774-bc3d-1fecf2055e8c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b5abe385-b560-43c9-8fc9-6efb7a07148f">
+                    <TableID>dbo_Facts</TableID>
+                    <ColumnID>citizenship_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="826b6df1-cf32-4d93-b0c2-6575e7cd1839">
+          <CubeDimensionID>T Social Status</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e8e38c7d-b206-4fdb-aa0e-4ce1012edf11">
+              <AttributeID>Socialstatus Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a3e19264-4c8b-4c97-b838-f274e2bbe3cd">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8c11efe4-1274-43b8-a775-e1f9aadabe55">
+                    <TableID>dbo_Facts</TableID>
+                    <ColumnID>socialstatus_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f9e7d762-aa91-41ad-a3b5-d86bbc0dfdc1">
+          <CubeDimensionID>T Occupation</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6cc677b6-76f6-46af-be90-ed18c1242a5f">
+              <AttributeID>Occupation Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8b6aeea4-9bbf-4a90-baec-367ed6814242">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="d3b486c0-cf0a-4c3d-9b3d-5da765a171fa">
+                    <TableID>dbo_Facts</TableID>
+                    <ColumnID>occupation_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="306c8d6b-5efa-4205-bb9e-b06adb5c0b84">
+          <CubeDimensionID>T Region</CubeDimensionID>
+          <MeasureGroupID>T Department</MeasureGroupID>
+        </Dimension>
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="6ee8be79-f27d-41ca-a2ed-5f172ddb5e24">
+          <CubeDimensionID>T Hiring Dismissal</CubeDimensionID>
+          <MeasureGroupID>T Employee</MeasureGroupID>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="8d4d5435-9b73-4210-93e1-996b25788cac">
+          <CubeDimensionID>T Employee - Hiringdismissal</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1417b50f-77f3-4477-88f9-b61987324847">
+              <AttributeID>Hiringdismissal Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>T Employee</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Hiringdismissal Id</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="ba3d11f7-db2b-4d1b-9c32-c9d766b8b1fc">
+          <CubeDimensionID>T Department - Region</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c0cadc62-5eec-4d5a-bc26-3ab3dfb4e291">
+              <AttributeID>Region Id</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>T Department</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Region Id</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="cbcbd8f7-100e-47aa-a651-3bdb12216ce4">
+      <ID>T Citizenship</ID>
+      <Name>T Citizenship</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="ce1c7b83-1587-4097-a42e-dc14e6282bf1">
+          <ID>T Citizenship Count</ID>
+          <Name>T Citizenship Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="386f8025-abf4-4be0-b244-d97ca9e9239b">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="28125504-e5ca-46ca-98bf-031a7698af30">
+              <TableID>dbo_T_Citizenship</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="d4465907-2737-42c2-8050-3c0a1ddc7f94">
+          <CubeDimensionID>T Citizenship</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="daa80050-ac87-4bfc-832b-8e615e196474">
+              <AttributeID>Citizenship Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a7781afb-792e-4cb8-a4c7-d9ce4675a482">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1c7309ee-a5e5-4cd0-9500-9c19f57b2ca9">
+                    <TableID>dbo_T_Citizenship</TableID>
+                    <ColumnID>citizenship_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="74a97ef5-c8ca-4fa7-a9ef-60420993a437">
+      <ID>T Department</ID>
+      <Name>T Department</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="2b6114a5-6f69-4a72-b9fe-5fd6c50c25ff">
+          <ID>T Department Count</ID>
+          <Name>T Department Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="419b849d-5c09-4f9f-95cc-962c5d92e5af">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="4a796a11-1297-4715-a473-7afae6481848">
+              <TableID>dbo_T_Department</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="e34daee9-6e3e-4a04-9d34-6e312c8563de">
+          <CubeDimensionID>T Department</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="000ef9b6-9098-4353-95e3-fc756e8dd3e2">
+              <AttributeID>Department Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="374128a7-9bad-4b57-90a4-396b51e55444">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c68fa97c-473a-45a0-8dab-025e345669c2">
+                    <TableID>dbo_T_Department</TableID>
+                    <ColumnID>department_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3bcd8b72-c107-45ce-a8b5-e9ebe490c0e5">
+          <CubeDimensionID>T Region</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b55642cd-8ccc-4ee2-a0a9-8525d63360aa">
+              <AttributeID>Region Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2045611b-b5a0-4f10-9808-335a19aa048b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6d214b9f-47db-41d1-af01-ddd9cb793cfb">
+                    <TableID>dbo_T_Department</TableID>
+                    <ColumnID>region_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="2818ec55-6679-4d16-9831-bfba52f28d9b">
+      <ID>T Employee</ID>
+      <Name>T Employee</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="cd621cbf-f516-4d19-a556-8fc1f0d2fb30">
+          <ID>T Employee Count</ID>
+          <Name>T Employee Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="7efce5c8-c792-4702-8ec8-5eca6e830079">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="7c20b4cf-977c-4466-b66f-3d497f4462ab">
+              <TableID>dbo_T_Employee</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="729d5e6e-efa4-4b06-b7ff-e0455703cabc">
+          <CubeDimensionID>T Employee</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5f095de4-703a-477e-9ba8-904cdd1d32e4">
+              <AttributeID>Employee Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="43f3da04-d1c7-41d5-8806-3cb0ae3d530b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="528e8f0c-7dc4-43d6-b76e-c7c379e282e2">
+                    <TableID>dbo_T_Employee</TableID>
+                    <ColumnID>employee_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d2afdece-e2c7-49af-8394-c938e0f7a67f">
+          <CubeDimensionID>T Hiring Dismissal</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1c451978-bc1e-413d-b4f3-09f84d1afe38">
+              <AttributeID>Hiringdismissal Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5c7035a3-b0c3-41cd-b577-600ae5ccfa83">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="53fc8c88-76cd-4ca4-a601-944290dcdfe5">
+                    <TableID>dbo_T_Employee</TableID>
+                    <ColumnID>hiringdismissal_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="c71e940e-7830-4943-a450-fb4cb72f4a86">
+      <ID>T Hiring Dismissal</ID>
+      <Name>T Hiring Dismissal</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="682f8241-fdcb-4577-9567-05748158188a">
+          <ID>T Hiring Dismissal Count</ID>
+          <Name>T Hiring Dismissal Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="d06bc765-1749-4ba3-8aff-a7524b864fc0">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="91deefcc-bbf9-44a4-ab4f-0ef9ff35988e">
+              <TableID>dbo_T_HiringDismissal</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="8bc69165-db30-409d-a421-fd0e5ddd71c2">
+          <CubeDimensionID>T Hiring Dismissal</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6ec6a793-b8f5-491b-aea7-16ca82e4f829">
+              <AttributeID>Hiringdismissal Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="caa2f9cc-29e7-46c1-8b1a-6026787a8707">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b63cf64f-27a1-4458-8a38-413b01f11085">
+                    <TableID>dbo_T_HiringDismissal</TableID>
+                    <ColumnID>hiringdismissal_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="6ed0a8fc-6a3c-46f6-8ab6-0b59fcde9e35">
+          <CubeDimensionID>T Employee</CubeDimensionID>
+          <MeasureGroupID>T Employee</MeasureGroupID>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="47fc7c76-1c9d-479b-8f85-7268efc72598">
+          <CubeDimensionID>T Employee - Hiringdismissal</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1ce6ccf5-07e3-4cd5-9ec1-ec0ea48f1ab3">
+              <AttributeID>Hiringdismissal Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e132f69a-fe37-4ad4-bdbf-dba7e8167c06">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="616d4835-c147-4b9a-a411-ddc9992bc84d">
+                    <TableID>dbo_T_HiringDismissal</TableID>
+                    <ColumnID>hiringdismissal_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="9401d0f1-ff21-4d52-b54a-36ae7fae5513">
+      <ID>T Occupation</ID>
+      <Name>T Occupation</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="56de1917-71e0-4d8e-8147-034c746a1a04">
+          <ID>Occupation Rate</ID>
+          <Name>Occupation Rate</Name>
+          <Source dwd:design-time-name="afbd23b5-57bc-4cd1-aff1-6a7f538c11af">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="d90b485a-4640-4dd6-bd0a-04abee5be110">
+              <TableID>dbo_T_Occupation</TableID>
+              <ColumnID>occupation_rate</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="a64c5a3b-554e-419c-9229-cf25ceaa9b2f">
+          <ID>T Occupation Count</ID>
+          <Name>T Occupation Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="e4ab89e3-b5c0-4a9b-9cc3-82dcea9b96d9">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="34f7c1e5-e26c-467c-9b40-3be35afe7b67">
+              <TableID>dbo_T_Occupation</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="5c6ebbb0-401e-4710-b633-7f1e23753b8b">
+          <CubeDimensionID>T Occupation</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a834ff05-3b2c-41a5-a320-c6fb5fd2314a">
+              <AttributeID>Occupation Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="27ae3066-37a9-43de-83a1-26f0e2747a89">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="092dd9d2-2848-4419-8330-33926d3d0b4b">
+                    <TableID>dbo_T_Occupation</TableID>
+                    <ColumnID>occupation_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="f3478511-185e-4a99-bec5-1a18b843b4f2">
+      <ID>T Previous Work Place</ID>
+      <Name>T Previous Work Place</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="7311b726-0e8d-49c2-b0cc-b275f55b76e5">
+          <ID>Previousworkplace Years</ID>
+          <Name>Previousworkplace Years</Name>
+          <Source dwd:design-time-name="e3b5bd1c-3da1-443c-ba94-babc8c1b35b8">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="f497977b-639d-474d-8ef6-84ec261696bb">
+              <TableID>dbo_T_PreviousWorkPlace</TableID>
+              <ColumnID>previousworkplace_years</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="0e6951e6-3857-4523-8b69-98acee8a5a3a">
+          <ID>T Previous Work Place Count</ID>
+          <Name>T Previous Work Place Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="d9247ed6-e73a-417a-84b0-ff7acbf39322">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="635de36a-0fb2-47c6-b438-a5258b100345">
+              <TableID>dbo_T_PreviousWorkPlace</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="ca8755d3-7364-41dd-bbea-90b3738ea265">
+          <CubeDimensionID>T Previous Work Place</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e69471b8-63ea-4a7f-9e18-e0fe4458a155">
+              <AttributeID>Previousworkplace Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4e5c071b-a9bb-4253-a035-cf9d1226dde9">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="04bdd8b0-9898-4883-97e2-a704ee0c8c56">
+                    <TableID>dbo_T_PreviousWorkPlace</TableID>
+                    <ColumnID>previousworkplace_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="fa89b0ec-3d31-4f31-8bd3-1b38b5dc8257">
+      <ID>T Region</ID>
+      <Name>T Region</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="3ef5f1ee-e0aa-4117-b1f8-b74e9e0d885e">
+          <ID>T Region Count</ID>
+          <Name>T Region Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="1fb3ab6b-15ff-4d56-b680-3f833a5f16b7">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="5bcb0117-b8b4-4b81-8ba0-827061ecca91">
+              <TableID>dbo_T_Region</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="03f29df4-7791-4f31-acd4-689ca0b25272">
+          <CubeDimensionID>T Region</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1d3c8286-ba57-4366-bf94-010392faa482">
+              <AttributeID>Region Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e1edbfdc-928d-4d71-8b17-ea6fc37b6758">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3014142e-bee4-4a7f-a793-22a4691e5e99">
+                    <TableID>dbo_T_Region</TableID>
+                    <ColumnID>region_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="fb14dc84-5775-44a9-9bf9-d04a9cb308b5">
+          <CubeDimensionID>T Department</CubeDimensionID>
+          <MeasureGroupID>T Department</MeasureGroupID>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="22005de7-4c2b-4fa2-a12a-20f706923e24">
+          <CubeDimensionID>T Department - Region</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="259d6e1c-8eb5-47a0-b66b-e21e3ada880a">
+              <AttributeID>Region Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="21dafec5-024b-4896-b168-775a8f2c4433">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="89fab19b-35a0-4db0-b56d-e34c81db3d5d">
+                    <TableID>dbo_T_Region</TableID>
+                    <ColumnID>region_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="9d21edc0-3e8c-4942-a03a-1048b7972eb8">
+      <ID>T Social Status</ID>
+      <Name>T Social Status</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="df966261-41fa-4b7f-8aed-4133c48d504a">
+          <ID>T Social Status Count</ID>
+          <Name>T Social Status Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="b754712e-c390-41e6-ac88-a2bae26e8ab9">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="9cf3e319-6bb0-4de4-b637-531524685899">
+              <TableID>dbo_T_SocialStatus</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="06f25e36-0786-4be6-b78c-044272e94ae3">
+          <CubeDimensionID>T Social Status</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fae6882c-3ec6-4a28-828b-bdc5bc600138">
+              <AttributeID>Socialstatus Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="19ba26a9-a20b-4bd8-92a9-678ab4fae73d">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0e5a3a4c-5712-415f-83ac-ee60c4e3f0d5">
+                    <TableID>dbo_T_SocialStatus</TableID>
+                    <ColumnID>socialstatus_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="7e54c54c-b853-4660-9447-e93dcb203238">
+      <ID>T Working Experience</ID>
+      <Name>T Working Experience</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="9f5b369f-d56e-4a32-9205-9b74cd764ede">
+          <ID>Workingexperience Years</ID>
+          <Name>Workingexperience Years</Name>
+          <Source dwd:design-time-name="77df1115-04ee-43ff-ad1b-d878626ecb77">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="22f38faa-db3f-40f2-8402-59c764ec8baa">
+              <TableID>dbo_T_WorkingExperience</TableID>
+              <ColumnID>workingexperience_years</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="bcbdc1da-3940-447c-a5b8-5e0125bbc080">
+          <ID>T Working Experience Count</ID>
+          <Name>T Working Experience Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="1212f913-69fe-41df-8545-107602d0fd86">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="70241519-f949-4f18-91b9-d3430678becc">
+              <TableID>dbo_T_WorkingExperience</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="3533c649-01d9-42d3-b18e-211af86d2cda">
+          <CubeDimensionID>T Working Experience</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f5ed3ef1-bd77-4016-bd8c-cb08917a1531">
+              <AttributeID>Workingexperience Id</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="8e5e9b58-de33-4e41-9197-cea6bb55f6cc">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="721ae3ff-8bcd-4a56-bded-2228e1c9e3c2">
+                    <TableID>dbo_T_WorkingExperience</TableID>
+                    <ColumnID>workingexperience_id</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="35de9bdc-148f-49d0-a0d9-a5b1557e72e7">
+    <DataSourceViewID>Lab02</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="38771afe-51b0-4160-988f-899be2980842">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+The CALCULATE command controls the aggregation of leaf cells in the cube.
+If the CALCULATE command is deleted or modified, the data within the cube is affected.
+You should edit this command only if you manually specify how the cube is aggregated.
+*/
+CALCULATE; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+</Cube>

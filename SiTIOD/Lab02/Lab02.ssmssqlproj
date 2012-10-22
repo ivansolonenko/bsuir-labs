@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Lab02">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="CRUAZER-LAPTOP:cruazer-laptop\cruazer">
+          <Created>2012-10-22T19:21:55.9836582+03:00</Created>
+          <Type>SQL</Type>
+          <Server>CRUAZER-LAPTOP</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>SiTIOD.Lab02</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="Таблицы.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:CRUAZER-LAPTOP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>CRUAZER-LAPTOP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Таблицы.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Данные.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:CRUAZER-LAPTOP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>CRUAZER-LAPTOP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Данные.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Выборка.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:CRUAZER-LAPTOP:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>CRUAZER-LAPTOP</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Выборка.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

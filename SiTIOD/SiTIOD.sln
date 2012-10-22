@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Lab02", "Lab02\Lab02.dwproj", "{1B204262-A5FA-44BA-95CC-B60490871A4E}"
+EndProject
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Lab03", "Lab03\Lab03.dwproj", "{3E7FD787-1F43-4031-9EA4-7F6B35CE27F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B204262-A5FA-44BA-95CC-B60490871A4E}.Development|Default.ActiveCfg = Development
+		{1B204262-A5FA-44BA-95CC-B60490871A4E}.Development|Default.Build.0 = Development
+		{1B204262-A5FA-44BA-95CC-B60490871A4E}.Development|Default.Deploy.0 = Development
+		{3E7FD787-1F43-4031-9EA4-7F6B35CE27F0}.Development|Default.ActiveCfg = Development
+		{3E7FD787-1F43-4031-9EA4-7F6B35CE27F0}.Development|Default.Build.0 = Development
+		{3E7FD787-1F43-4031-9EA4-7F6B35CE27F0}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

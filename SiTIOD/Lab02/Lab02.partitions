@@ -1,0 +1,205 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4d5c1632-342c-44d1-b60c-6da7536aa848" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Lab02</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Facts</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="dbc4e457-f705-453b-9567-f9abe2f3be91">
+          <ID>Facts</ID>
+          <Name>Facts</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="e271a624-56ac-4412-b127-11d1aa45d9ef">
+            <DataSourceViewID>Lab02</DataSourceViewID>
+            <TableID>dbo_Facts</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>T Citizenship</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="14afe146-933f-407a-bc72-f4cde01d9e9f">
+          <ID>T Citizenship</ID>
+          <Name>T Citizenship</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="8cac1f1b-0dc3-4084-aefb-946ae0597ce5">
+            <DataSourceViewID>Lab02</DataSourceViewID>
+            <TableID>dbo_T_Citizenship</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>T Department</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="b91e991a-1cc5-4108-8e5b-093b2d00ae8f">
+          <ID>T Department</ID>
+          <Name>T Department</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="fe6359d3-5946-4917-9941-1771d8f417e9">
+            <DataSourceViewID>Lab02</DataSourceViewID>
+            <TableID>dbo_T_Department</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>T Employee</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="d1ac2bdd-51a7-49a6-ab4a-83e2f2f4c15e">
+          <ID>T Employee</ID>
+          <Name>T Employee</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="2764abbe-ed34-448c-a583-565bc685e49d">
+            <DataSourceViewID>Lab02</DataSourceViewID>
+            <TableID>dbo_T_Employee</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>T Hiring Dismissal</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="aa34b0a6-a5b9-4d37-8cd0-4a282e7e6f0e">
+          <ID>T Hiring Dismissal</ID>
+          <Name>T Hiring Dismissal</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="8328690f-ada4-4d3b-9bcf-801b176c29b8">
+            <DataSourceViewID>Lab02</DataSourceViewID>
+            <TableID>dbo_T_HiringDismissal</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>T Occupation</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="c3cf8e85-061a-4112-b4a8-5dd6016d0e82">
+          <ID>T Occupation</ID>
+          <Name>T Occupation</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="aa335313-2705-4303-9ad2-e05ff030ebba">
+            <DataSourceViewID>Lab02</DataSourceViewID>
+            <TableID>dbo_T_Occupation</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>T Previous Work Place</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="53ef174d-15aa-43db-9625-888b8a61f864">
+          <ID>T Previous Work Place</ID>
+          <Name>T Previous Work Place</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="4a38f0e4-b9a4-4d16-9fd3-3bc4593d3e42">
+            <DataSourceViewID>Lab02</DataSourceViewID>
+            <TableID>dbo_T_PreviousWorkPlace</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>T Region</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="be165210-b1b7-4b5e-949f-fff38eab9a9d">
+          <ID>T Region</ID>
+          <Name>T Region</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="9dd37cdc-4827-4e28-95ab-4147ff19aff3">
+            <DataSourceViewID>Lab02</DataSourceViewID>
+            <TableID>dbo_T_Region</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>T Social Status</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="53a96830-e31f-437e-a5dc-3497887f5d57">
+          <ID>T Social Status</ID>
+          <Name>T Social Status</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b7d1ec22-da1d-4972-b6e1-31ccd3eb5257">
+            <DataSourceViewID>Lab02</DataSourceViewID>
+            <TableID>dbo_T_SocialStatus</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>T Working Experience</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="3038bc6f-18dc-4d85-8c32-7a6efca8ca68">
+          <ID>T Working Experience</ID>
+          <Name>T Working Experience</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="f130edef-4c7e-45b0-bdf7-9a6349481b17">
+            <DataSourceViewID>Lab02</DataSourceViewID>
+            <TableID>dbo_T_WorkingExperience</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>
