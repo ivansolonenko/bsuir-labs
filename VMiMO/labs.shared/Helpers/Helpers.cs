@@ -5,16 +5,19 @@ namespace labs.Helpers
 {
 	public static class Helpers
 	{
-		public static int StringToInt(string input)
+		public static T StringToNumber<T>(string input)
 		{
 			if (string.IsNullOrWhiteSpace(input))
-				return 0;
+				throw new ApplicationException("Введена пустая строка.");
 
-			int count;
-			return int.TryParse(input, out count) ? count : 0;
+			T count;
+			if (!TryParse(input, out count))
+				throw new ApplicationException("Введено не число.");
+
+			return count;
 		}
 
-		public static IEnumerable<double> StringToDoubleArrayWithCheck(string input, int count)
+		public static IEnumerable<T> StringToEnumerable<T>(string input, int count)
 		{
 			var tokens = input.Split(new[] { ' ' });
 
@@ -25,9 +28,23 @@ namespace labs.Helpers
 
 			foreach (var token in tokens)
 			{
-				double x;
-				if (double.TryParse(token, out x))
+				T x;
+				if (TryParse(token, out x))
 					yield return x;
+			}
+		}
+
+		private static bool TryParse<T>(string text, out T value)
+		{
+			value = default(T);
+			try
+			{
+				value = (T)Convert.ChangeType(text, typeof(T));
+				return true;
+			}
+			catch
+			{
+				return false;
 			}
 		}
 	}

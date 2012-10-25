@@ -12,10 +12,10 @@ namespace lab01
 		// ReSharper restore UnusedParameter.Local
 		{
 			Console.Write("Количество переменных: ");
-			var cols = Helpers.StringToInt(Console.ReadLine());
+			var cols = Helpers.StringToNumber<int>(Console.ReadLine());
 
 			Console.Write("Количество строк: ");
-			var rows = Helpers.StringToInt(Console.ReadLine());
+			var rows = Helpers.StringToNumber<int>(Console.ReadLine());
 
 			try
 			{
@@ -24,12 +24,12 @@ namespace lab01
 				for (var i = 0; i < rows; i++)
 				{
 					Console.Write("Коэффициенты {0} уравнения: ", i + 1);
-					var coefficients = Helpers.StringToDoubleArrayWithCheck(Console.ReadLine(), cols);
+					var coefficients = Helpers.StringToEnumerable<double>(Console.ReadLine(), cols);
 					equationSystem.Coefficients.Add(coefficients);
 				}
 
 				Console.Write("Результаты: ");
-				var values = Helpers.StringToDoubleArrayWithCheck(Console.ReadLine(), rows);
+				var values = Helpers.StringToEnumerable<double>(Console.ReadLine(), rows);
 				equationSystem.Values = values;
 
 				Console.WriteLine("Ответ: {0}", equationSystem.Gauss(PrettyPrint.True));

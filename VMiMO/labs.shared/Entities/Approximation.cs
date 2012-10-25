@@ -11,7 +11,8 @@
 
 */
 
-using labs.Collections;
+using System;
+using System.Collections.Generic;
 
 namespace labs.Entities
 {
@@ -25,21 +26,21 @@ namespace labs.Entities
 		public int M { private get; set; }
 		public int N { private get; set; }
 
-		private KeyValuePairList<double, double> _values;
-		public KeyValuePairList<double, double> Values
+		private List<Tuple<double, double>> _values;
+		public List<Tuple<double, double>> Values
 		{
 			get
 			{
 				if (_values != null)
 					return _values;
 
-				_values = new KeyValuePairList<double, double>();
+				_values = new List<Tuple<double, double>>();
 
 				for (var i = 1; i <= M; i++)
 				{
 					var x = A + (i - 1) * (B - A) / (M - 1);
 					var y = Function(x);
-					_values.Add(x, y);
+					_values.Add(new Tuple<double, double>(x, y));
 				}
 
 				return _values;

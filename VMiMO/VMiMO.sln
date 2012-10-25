@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab02", "lab02\lab02.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab03", "lab03\lab03.csproj", "{8B67D0A0-D734-4656-8910-A564DCEE025B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab04", "lab04\lab04.csproj", "{4E345662-05EC-43A8-A0D3-E491AD87453C}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -63,6 +65,16 @@ Global
 		{8B67D0A0-D734-4656-8910-A564DCEE025B}.Release|Mixed Platforms.Build.0 = Release|x86
 		{8B67D0A0-D734-4656-8910-A564DCEE025B}.Release|x86.ActiveCfg = Release|x86
 		{8B67D0A0-D734-4656-8910-A564DCEE025B}.Release|x86.Build.0 = Release|x86
+		{4E345662-05EC-43A8-A0D3-E491AD87453C}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{4E345662-05EC-43A8-A0D3-E491AD87453C}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{4E345662-05EC-43A8-A0D3-E491AD87453C}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{4E345662-05EC-43A8-A0D3-E491AD87453C}.Debug|x86.ActiveCfg = Debug|x86
+		{4E345662-05EC-43A8-A0D3-E491AD87453C}.Debug|x86.Build.0 = Debug|x86
+		{4E345662-05EC-43A8-A0D3-E491AD87453C}.Release|Any CPU.ActiveCfg = Release|x86
+		{4E345662-05EC-43A8-A0D3-E491AD87453C}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{4E345662-05EC-43A8-A0D3-E491AD87453C}.Release|Mixed Platforms.Build.0 = Release|x86
+		{4E345662-05EC-43A8-A0D3-E491AD87453C}.Release|x86.ActiveCfg = Release|x86
+		{4E345662-05EC-43A8-A0D3-E491AD87453C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
