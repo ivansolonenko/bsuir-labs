@@ -14,8 +14,8 @@ namespace labs.Calculations
 			for (var i = 0; i <= count; i++)
 			{
 				var x = integral.A + i * (integral.B - integral.A) / 10;
-				var value = integral.FirstDerivative(x);
-				var approximation = (integral.Function(x + integral.H) - integral.Function(x - integral.H)) / (2 * integral.H);
+				var value = integral.FirstDerivative.Value(x);
+				var approximation = (integral.Function.Value(x + integral.H) - integral.Function.Value(x - integral.H)) / (2 * integral.H);
 				var error = (value - approximation) * integral.K;
 
 				yield return new Tuple<double, double, double, double>(x, value, approximation, error);
@@ -27,8 +27,8 @@ namespace labs.Calculations
 			for (var i = 0; i <= count; i++)
 			{
 				var x = integral.A + i * (integral.B - integral.A) / 10;
-				var value = integral.SecondDerivative(x);
-				var approximation = (integral.Function(x + integral.H) - 2 * integral.Function(x) + integral.Function(x - integral.H)) / Math.Pow(integral.H, 2);
+				var value = integral.SecondDerivative.Value(x);
+				var approximation = (integral.Function.Value(x + integral.H) - 2 * integral.Function.Value(x) + integral.Function.Value(x - integral.H)) / Math.Pow(integral.H, 2);
 				var error = (value - approximation) * integral.K;
 
 				yield return new Tuple<double, double, double, double>(x, value, approximation, error);

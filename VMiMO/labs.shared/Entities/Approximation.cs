@@ -18,8 +18,7 @@ namespace labs.Entities
 {
 	public class Approximation
 	{
-		public delegate double MyFunc(double value);
-		public MyFunc Function { private get; set; }
+		public MathematicalFunction Function { private get; set; }
 
 		public int A { private get; set; }
 		public int B { private get; set; }
@@ -39,7 +38,7 @@ namespace labs.Entities
 				for (var i = 1; i <= M; i++)
 				{
 					var x = A + (i - 1) * (B - A) / (M - 1);
-					var y = Function(x);
+					var y = Function.Value(x);
 					_values.Add(new Tuple<double, double>(x, y));
 				}
 

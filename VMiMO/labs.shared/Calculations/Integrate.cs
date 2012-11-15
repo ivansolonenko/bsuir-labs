@@ -13,7 +13,7 @@ namespace labs.Calculations
 
 			for (int i = 0; i < integral.N; i++)
 			{
-				s += integral.Function(x);
+				s += integral.Function.Value(x);
 				x = x + h;
 			}
 			s = s * h;
