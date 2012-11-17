@@ -6,9 +6,9 @@ namespace Kot03.Individual
 {
 	static class Program
 	{
-		private const string File1 = @"..\..\..\..\file1.txt";
-		private const string File2 = @"..\..\..\..\file2.txt";
-		private const string File3 = @"..\..\..\..\file3.txt";
+		private const string File1 = @"C:\Users\Public\Documents\file1.txt";
+		private const string File2 = @"C:\Users\Public\Documents\file2.txt";
+		private const string File3 = @"C:\Users\Public\Documents\file3.txt";
 
 		static void Main(string[] args)
 		{

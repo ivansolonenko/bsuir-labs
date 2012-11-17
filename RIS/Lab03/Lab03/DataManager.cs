@@ -7,7 +7,7 @@ namespace Lab03
 {
 	public static class DataManager
 	{
-		private const string Filename = "data.xml";
+		private const string Filename = @"C:\Users\Public\Documents\departments.xml";
 		private static List<Department> _departments = new List<Department>();
 
 		public static void Add(Department department)
