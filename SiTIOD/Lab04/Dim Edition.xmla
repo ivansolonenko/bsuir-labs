@@ -1,0 +1,113 @@
+<Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+	<ParentObject>
+		<DatabaseID>Lab03</DatabaseID>
+	</ParentObject>
+	<ObjectDefinition>
+		<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200">
+			<ID>Dim Edition</ID>
+			<Name>Dim Edition</Name>
+			<Source xsi:type="DataSourceViewBinding">
+				<DataSourceViewID>Lab03</DataSourceViewID>
+			</Source>
+			<UnknownMember>Visible</UnknownMember>
+			<ErrorConfiguration>
+				<KeyNotFound>ReportAndStop</KeyNotFound>
+				<KeyDuplicate>ReportAndStop</KeyDuplicate>
+				<NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+			</ErrorConfiguration>
+			<Language>1033</Language>
+			<Collation>Latin1_General_CI_AS</Collation>
+			<UnknownMemberName>Unknown</UnknownMemberName>
+			<Attributes>
+				<Attribute>
+					<ID>Id</ID>
+					<Name>Id</Name>
+					<Usage>Key</Usage>
+					<KeyColumns>
+						<KeyColumn>
+							<NullProcessing>UnknownMember</NullProcessing>
+							<DataType>Integer</DataType>
+							<Source xsi:type="ColumnBinding">
+								<TableID>dbo_dim_edition</TableID>
+								<ColumnID>id</ColumnID>
+							</Source>
+						</KeyColumn>
+					</KeyColumns>
+					<NameColumn>
+						<NullProcessing>ZeroOrBlank</NullProcessing>
+						<DataType>WChar</DataType>
+						<Source xsi:type="ColumnBinding">
+							<TableID>dbo_dim_edition</TableID>
+							<ColumnID>id</ColumnID>
+						</Source>
+					</NameColumn>
+					<AttributeRelationships>
+						<AttributeRelationship>
+							<AttributeID>Amount</AttributeID>
+							<Name>Amount</Name>
+						</AttributeRelationship>
+						<AttributeRelationship>
+							<AttributeID>DMY</AttributeID>
+							<Name>DMY</Name>
+						</AttributeRelationship>
+					</AttributeRelationships>
+					<OrderBy>Key</OrderBy>
+				</Attribute>
+				<Attribute>
+					<ID>Amount</ID>
+					<Name>Amount</Name>
+					<KeyColumns>
+						<KeyColumn>
+							<DataType>WChar</DataType>
+							<DataSize>100</DataSize>
+							<Source xsi:type="ColumnBinding">
+								<TableID>dbo_dim_edition</TableID>
+								<ColumnID>Amount</ColumnID>
+							</Source>
+						</KeyColumn>
+					</KeyColumns>
+					<NameColumn>
+						<DataType>WChar</DataType>
+						<DataSize>100</DataSize>
+						<Source xsi:type="ColumnBinding">
+							<TableID>dbo_dim_edition</TableID>
+							<ColumnID>Amount</ColumnID>
+						</Source>
+					</NameColumn>
+					<OrderBy>Key</OrderBy>
+				</Attribute>
+				<Attribute>
+					<ID>DMY</ID>
+					<Name>DMY</Name>
+					<KeyColumns>
+						<KeyColumn>
+							<DataType>WChar</DataType>
+							<DataSize>10</DataSize>
+							<Source xsi:type="ColumnBinding">
+								<TableID>dbo_dim_edition</TableID>
+								<ColumnID>DMY</ColumnID>
+							</Source>
+						</KeyColumn>
+					</KeyColumns>
+					<NameColumn>
+						<DataType>WChar</DataType>
+						<DataSize>10</DataSize>
+						<Source xsi:type="ColumnBinding">
+							<TableID>dbo_dim_edition</TableID>
+							<ColumnID>DMY</ColumnID>
+						</Source>
+					</NameColumn>
+					<OrderBy>Key</OrderBy>
+				</Attribute>
+			</Attributes>
+			<ProactiveCaching>
+				<SilenceInterval>-PT1S</SilenceInterval>
+				<Latency>-PT1S</Latency>
+				<SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+				<ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+				<Source xsi:type="ProactiveCachingInheritedBinding" />
+			</ProactiveCaching>
+		</Dimension>
+	</ObjectDefinition>
+</Create>
+

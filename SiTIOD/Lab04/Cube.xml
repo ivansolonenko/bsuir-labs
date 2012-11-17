@@ -1,0 +1,71 @@
+<Dimensions>
+	<Dimension>
+		<ID>Dim Edition</ID>
+		<Name>Dim Edition</Name>
+		<DimensionID>Dim Edition</DimensionID>
+		<Attributes>
+			<Attribute>
+				<AttributeID>Id</AttributeID>
+			</Attribute>
+			<Attribute>
+				<AttributeID>Amount</AttributeID>
+			</Attribute>
+			<Attribute>
+				<AttributeID>DMY</AttributeID>
+			</Attribute>
+		</Attributes>
+	</Dimension>
+</Dimensions>
+<MeasureGroups>
+	<MeasureGroup>
+				<Dimensions>
+					<!-- ... -->
+					<Dimension xsi:type="RegularMeasureGroupDimension">
+						<CubeDimensionID>Dim Edition</CubeDimensionID>
+						<Attributes>
+							<Attribute>
+								<AttributeID>Id</AttributeID>
+								<KeyColumns>
+									<KeyColumn>
+										<NullProcessing>UnknownMember</NullProcessing>
+										<DataType>Integer</DataType>
+										<Source xsi:type="ColumnBinding">
+											<TableID>dbo_facts</TableID>
+											<ColumnID>EditionId</ColumnID>
+										</Source>
+									</KeyColumn>
+								</KeyColumns>
+								<Type>Granularity</Type>
+							</Attribute>
+							<Attribute>
+								<AttributeID>Amount</AttributeID>
+								<KeyColumns>
+									<KeyColumn>
+										<DataType>WChar</DataType>
+										<DataSize>100</DataSize>
+										<Source xsi:type="ColumnBinding">
+											<TableID>dbo_dim_edition</TableID>
+											<ColumnID>Amount</ColumnID>
+										</Source>
+									</KeyColumn>
+								</KeyColumns>
+							</Attribute>
+							<Attribute>
+								<AttributeID>DMY</AttributeID>
+								<KeyColumns>
+									<KeyColumn>
+										<DataType>WChar</DataType>
+										<DataSize>10</DataSize>
+										<Source xsi:type="ColumnBinding">
+											<TableID>dbo_dim_edition</TableID>
+											<ColumnID>DMY</ColumnID>
+										</Source>
+									</KeyColumn>
+								</KeyColumns>
+							</Attribute>
+						</Attributes>
+					</Dimension>
+					<!-- ... -->
+				</Dimensions>
+	</MeasureGroup>
+</MeasureGroups>

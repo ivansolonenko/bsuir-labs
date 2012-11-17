@@ -1,0 +1,50 @@
+<Schema>
+	<xs:schema id="Lab03" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+		<xs:element name="Lab03" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+			<xs:complexType>
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+					<xs:element name="dbo_facts" msprop:FriendlyName="facts" msprop:DbSchemaName="dbo" msprop:DbTableName="facts" msprop:TableType="Table">
+						<xs:complexType>
+							<xs:sequence>
+								<!-- ... -->
+								<xs:element name="EditionId" msprop:DbColumnName="EditionId" type="xs:int" minOccurs="0" />
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="dbo_dim_edition" msprop:FriendlyName="dim_edition" msprop:DbSchemaName="dbo" msprop:DbTableName="dim_edition" msprop:TableType="Table">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:FriendlyName="id" msprop:DbColumnName="id" type="xs:int" />
+								<xs:element name="Amount" msprop:FriendlyName="Amount" msprop:DbColumnName="Amount">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:maxLength value="100" />
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+								<xs:element name="DMY" msprop:FriendlyName="DMY" msprop:DbColumnName="DMY">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:maxLength value="10" />
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:choice>
+			</xs:complexType>
+			<!-- ... -->
+			<xs:unique name="dbo_dim_edition_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+				<xs:selector xpath=".//dbo_dim_edition" />
+				<xs:field xpath="id" />
+			</xs:unique>
+			<!-- ... -->
+			<xs:keyref name="FK_facts_dim_edition" refer="dbo_dim_edition_Constraint1">
+				<xs:selector xpath=".//dbo_facts" />
+				<xs:field xpath="EditionId" />
+			</xs:keyref>
+			<!-- ... -->
+		</xs:element>
+	</xs:schema>
+</Schema>

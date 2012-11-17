@@ -1,0 +1,917 @@
+<Alter ObjectExpansion="ExpandFull" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+	<Object>
+		<DatabaseID>Lab03</DatabaseID>
+		<CubeID>Lab03</CubeID>
+	</Object>
+	<ObjectDefinition>
+		<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200">
+			<ID>Lab03</ID>
+			<Name>Lab03</Name>
+			<Language>1033</Language>
+			<Collation>Latin1_General_CI_AS</Collation>
+			<Dimensions>
+				<Dimension>
+					<ID>Dim Genre</ID>
+					<Name>Dim Genre</Name>
+					<DimensionID>Dim Genre</DimensionID>
+					<Attributes>
+						<Attribute>
+							<AttributeID>Id</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Dim Style - Id</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Title</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Second Title</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Age</AttributeID>
+						</Attribute>
+					</Attributes>
+				</Dimension>
+				<Dimension>
+					<ID>Dim Quality</ID>
+					<Name>Dim Quality</Name>
+					<DimensionID>Dim Quality</DimensionID>
+					<Attributes>
+						<Attribute>
+							<AttributeID>Id</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Type</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Material</AttributeID>
+						</Attribute>
+					</Attributes>
+				</Dimension>
+				<Dimension>
+					<ID>Dim Date</ID>
+					<Name>Dim Date</Name>
+					<DimensionID>Dim Date</DimensionID>
+					<Attributes>
+						<Attribute>
+							<AttributeID>Id</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>DMY</AttributeID>
+						</Attribute>
+					</Attributes>
+				</Dimension>
+				<Dimension>
+					<ID>Dim Language</ID>
+					<Name>Dim Language</Name>
+					<DimensionID>Dim Language</DimensionID>
+					<Attributes>
+						<Attribute>
+							<AttributeID>Id</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Title</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Dialect</AttributeID>
+						</Attribute>
+					</Attributes>
+				</Dimension>
+				<Dimension>
+					<ID>Dim Book</ID>
+					<Name>Dim Book</Name>
+					<DimensionID>Dim Book</DimensionID>
+					<Attributes>
+						<Attribute>
+							<AttributeID>Id</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Dim Author - Id</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Dim Author Description - Id</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Title</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Summary</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Author Id</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Country</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Years</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Name</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Nickname</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Age</AttributeID>
+						</Attribute>
+					</Attributes>
+				</Dimension>
+				<Dimension>
+					<ID>Dim Opinion</ID>
+					<Name>Dim Opinion</Name>
+					<DimensionID>Dim Opinion</DimensionID>
+					<Attributes>
+						<Attribute>
+							<AttributeID>Id</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Text</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Nick</AttributeID>
+						</Attribute>
+					</Attributes>
+				</Dimension>
+				<Dimension>
+					<ID>Dim Translator</ID>
+					<Name>Dim Translator</Name>
+					<DimensionID>Dim Translator</DimensionID>
+					<Attributes>
+						<Attribute>
+							<AttributeID>Id</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Name</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Degree</AttributeID>
+						</Attribute>
+					</Attributes>
+				</Dimension>
+				<Dimension>
+					<ID>Dim Publisher</ID>
+					<Name>Dim Publisher</Name>
+					<DimensionID>Dim Publisher</DimensionID>
+					<Attributes>
+						<Attribute>
+							<AttributeID>Id</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Name</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Place</AttributeID>
+						</Attribute>
+					</Attributes>
+				</Dimension>
+				<Dimension>
+					<ID>Dim Edition</ID>
+					<Name>Dim Edition</Name>
+					<DimensionID>Dim Edition</DimensionID>
+					<Attributes>
+						<Attribute>
+							<AttributeID>Id</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>Amount</AttributeID>
+						</Attribute>
+						<Attribute>
+							<AttributeID>DMY</AttributeID>
+						</Attribute>
+					</Attributes>
+				</Dimension>
+			</Dimensions>
+			<MeasureGroups>
+				<MeasureGroup>
+					<ID>Facts</ID>
+					<Name>Facts</Name>
+					<Measures>
+						<Measure>
+							<ID>Price</ID>
+							<Name>Price</Name>
+							<DataType>Integer</DataType>
+							<Source>
+								<DataType>Integer</DataType>
+								<Source xsi:type="ColumnBinding">
+									<TableID>dbo_facts</TableID>
+									<ColumnID>Price</ColumnID>
+								</Source>
+							</Source>
+						</Measure>
+						<Measure>
+							<ID>Qty</ID>
+							<Name>Qty</Name>
+							<DataType>Integer</DataType>
+							<Source>
+								<DataType>Integer</DataType>
+								<Source xsi:type="ColumnBinding">
+									<TableID>dbo_facts</TableID>
+									<ColumnID>Qty</ColumnID>
+								</Source>
+							</Source>
+						</Measure>
+						<Measure>
+							<ID>Pages Ammount</ID>
+							<Name>Pages Ammount</Name>
+							<DataType>Integer</DataType>
+							<Source>
+								<DataType>Integer</DataType>
+								<Source xsi:type="ColumnBinding">
+									<TableID>dbo_facts</TableID>
+									<ColumnID>PagesAmmount</ColumnID>
+								</Source>
+							</Source>
+						</Measure>
+						<Measure>
+							<ID>Discount</ID>
+							<Name>Discount</Name>
+							<DataType>Integer</DataType>
+							<Source>
+								<DataType>Integer</DataType>
+								<Source xsi:type="ColumnBinding">
+									<TableID>dbo_facts</TableID>
+									<ColumnID>Discount</ColumnID>
+								</Source>
+							</Source>
+						</Measure>
+						<Measure>
+							<ID>Books Of The Same Author</ID>
+							<Name>Books Of The Same Author</Name>
+							<DataType>Integer</DataType>
+							<Source>
+								<DataType>Integer</DataType>
+								<Source xsi:type="ColumnBinding">
+									<TableID>dbo_facts</TableID>
+									<ColumnID>BooksOfTheSameAuthor</ColumnID>
+								</Source>
+							</Source>
+						</Measure>
+						<Measure>
+							<ID>Co Authors</ID>
+							<Name>Co Authors</Name>
+							<DataType>Integer</DataType>
+							<Source>
+								<DataType>Integer</DataType>
+								<Source xsi:type="ColumnBinding">
+									<TableID>dbo_facts</TableID>
+									<ColumnID>CoAuthors</ColumnID>
+								</Source>
+							</Source>
+						</Measure>
+						<Measure>
+							<ID>Facts Count</ID>
+							<Name>Facts Count</Name>
+							<AggregateFunction>Count</AggregateFunction>
+							<DataType>Integer</DataType>
+							<Source>
+								<DataType>Integer</DataType>
+								<DataSize>4</DataSize>
+								<Source xsi:type="RowBinding">
+									<TableID>dbo_facts</TableID>
+								</Source>
+							</Source>
+						</Measure>
+					</Measures>
+					<StorageMode>Molap</StorageMode>
+					<ProcessingMode>Regular</ProcessingMode>
+					<Dimensions>
+						<Dimension xsi:type="RegularMeasureGroupDimension">
+							<CubeDimensionID>Dim Genre</CubeDimensionID>
+							<Attributes>
+								<Attribute>
+									<AttributeID>Id</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>Integer</DataType>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_facts</TableID>
+												<ColumnID>GenreId</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+									<Type>Granularity</Type>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Dim Style - Id</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>Integer</DataType>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_style</TableID>
+												<ColumnID>id</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Title</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_style</TableID>
+												<ColumnID>Title</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Second Title</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_style</TableID>
+												<ColumnID>SecondTitle</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Age</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>Integer</DataType>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_genre</TableID>
+												<ColumnID>Age</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+							</Attributes>
+						</Dimension>
+						<Dimension xsi:type="RegularMeasureGroupDimension">
+							<CubeDimensionID>Dim Quality</CubeDimensionID>
+							<Attributes>
+								<Attribute>
+									<AttributeID>Id</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>Integer</DataType>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_facts</TableID>
+												<ColumnID>QualityId</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+									<Type>Granularity</Type>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Type</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_quality</TableID>
+												<ColumnID>Type</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Material</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_quality</TableID>
+												<ColumnID>Material</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+							</Attributes>
+						</Dimension>
+						<Dimension xsi:type="RegularMeasureGroupDimension">
+							<CubeDimensionID>Dim Date</CubeDimensionID>
+							<Attributes>
+								<Attribute>
+									<AttributeID>Id</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>Integer</DataType>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_facts</TableID>
+												<ColumnID>DateId</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+									<Type>Granularity</Type>
+								</Attribute>
+								<Attribute>
+									<AttributeID>DMY</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>Date</DataType>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_date</TableID>
+												<ColumnID>DMY</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+							</Attributes>
+						</Dimension>
+						<Dimension xsi:type="RegularMeasureGroupDimension">
+							<CubeDimensionID>Dim Language</CubeDimensionID>
+							<Attributes>
+								<Attribute>
+									<AttributeID>Id</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>Integer</DataType>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_facts</TableID>
+												<ColumnID>LangId</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+									<Type>Granularity</Type>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Title</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_language</TableID>
+												<ColumnID>Title</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Dialect</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_language</TableID>
+												<ColumnID>Dialect</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+							</Attributes>
+						</Dimension>
+						<Dimension xsi:type="RegularMeasureGroupDimension">
+							<CubeDimensionID>Dim Book</CubeDimensionID>
+							<Attributes>
+								<Attribute>
+									<AttributeID>Id</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>Integer</DataType>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_facts</TableID>
+												<ColumnID>BookId</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+									<Type>Granularity</Type>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Dim Author - Id</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>Integer</DataType>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_author</TableID>
+												<ColumnID>id</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Dim Author Description - Id</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>Integer</DataType>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_authorDescription</TableID>
+												<ColumnID>id</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Title</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>50</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_book</TableID>
+												<ColumnID>Title</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Summary</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>50</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_book</TableID>
+												<ColumnID>Summary</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Author Id</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>Integer</DataType>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_book</TableID>
+												<ColumnID>AuthorId</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Country</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_authorDescription</TableID>
+												<ColumnID>Country</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Years</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_authorDescription</TableID>
+												<ColumnID>Years</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Name</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_author</TableID>
+												<ColumnID>Name</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Nickname</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_author</TableID>
+												<ColumnID>Nickname</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Age</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>Integer</DataType>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_author</TableID>
+												<ColumnID>Age</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+							</Attributes>
+						</Dimension>
+						<Dimension xsi:type="RegularMeasureGroupDimension">
+							<CubeDimensionID>Dim Opinion</CubeDimensionID>
+							<Attributes>
+								<Attribute>
+									<AttributeID>Id</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>Integer</DataType>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_facts</TableID>
+												<ColumnID>OpinionId</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+									<Type>Granularity</Type>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Text</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_opinion</TableID>
+												<ColumnID>Text</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Nick</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_opinion</TableID>
+												<ColumnID>Nick</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+							</Attributes>
+						</Dimension>
+						<Dimension xsi:type="RegularMeasureGroupDimension">
+							<CubeDimensionID>Dim Translator</CubeDimensionID>
+							<Attributes>
+								<Attribute>
+									<AttributeID>Id</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>Integer</DataType>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_facts</TableID>
+												<ColumnID>TranslatorId</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+									<Type>Granularity</Type>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Name</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_translator</TableID>
+												<ColumnID>Name</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Degree</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_translator</TableID>
+												<ColumnID>Degree</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+							</Attributes>
+						</Dimension>
+						<Dimension xsi:type="RegularMeasureGroupDimension">
+							<CubeDimensionID>Dim Publisher</CubeDimensionID>
+							<Attributes>
+								<Attribute>
+									<AttributeID>Id</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>Integer</DataType>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_facts</TableID>
+												<ColumnID>PublisherId</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+									<Type>Granularity</Type>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Name</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_publisher</TableID>
+												<ColumnID>Name</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Place</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_publisher</TableID>
+												<ColumnID>Place</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+							</Attributes>
+						</Dimension>
+						<Dimension xsi:type="RegularMeasureGroupDimension">
+							<CubeDimensionID>Dim Edition</CubeDimensionID>
+							<Attributes>
+								<Attribute>
+									<AttributeID>Id</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<NullProcessing>UnknownMember</NullProcessing>
+											<DataType>Integer</DataType>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_facts</TableID>
+												<ColumnID>EditionId</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+									<Type>Granularity</Type>
+								</Attribute>
+								<Attribute>
+									<AttributeID>Amount</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>100</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_edition</TableID>
+												<ColumnID>Amount</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+								<Attribute>
+									<AttributeID>DMY</AttributeID>
+									<KeyColumns>
+										<KeyColumn>
+											<DataType>WChar</DataType>
+											<DataSize>10</DataSize>
+											<Source xsi:type="ColumnBinding">
+												<TableID>dbo_dim_edition</TableID>
+												<ColumnID>DMY</ColumnID>
+											</Source>
+										</KeyColumn>
+									</KeyColumns>
+								</Attribute>
+							</Attributes>
+						</Dimension>
+					</Dimensions>
+					<Partitions>
+						<Partition>
+							<ID>Facts</ID>
+							<Name>Facts</Name>
+							<Source xsi:type="DsvTableBinding">
+								<DataSourceViewID>Lab03</DataSourceViewID>
+								<TableID>dbo_facts</TableID>
+							</Source>
+							<StorageMode>Molap</StorageMode>
+							<ProcessingMode>Regular</ProcessingMode>
+							<ProactiveCaching>
+								<SilenceInterval>-PT1S</SilenceInterval>
+								<Latency>-PT1S</Latency>
+								<SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+								<ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+								<Source xsi:type="ProactiveCachingInheritedBinding" />
+							</ProactiveCaching>
+						</Partition>
+					</Partitions>
+					<ProactiveCaching>
+						<SilenceInterval>-PT1S</SilenceInterval>
+						<Latency>-PT1S</Latency>
+						<SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+						<ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+						<Source xsi:type="ProactiveCachingInheritedBinding" />
+					</ProactiveCaching>
+				</MeasureGroup>
+			</MeasureGroups>
+			<Source>
+				<DataSourceViewID>Lab03</DataSourceViewID>
+			</Source>
+			<MdxScripts>
+				<MdxScript>
+					<ID>MdxScript</ID>
+					<Name>MdxScript</Name>
+					<Commands>
+						<Command>
+							<Text>
+								/*
+								The CALCULATE command controls the aggregation of leaf cells in the cube.
+								If the CALCULATE command is deleted or modified, the data within the cube is affected.
+								You should edit this command only if you manually specify how the cube is aggregated.
+								*/
+								CALCULATE;
+								CREATE MEMBER CURRENTCUBE.[Measures].[DiscountPr]
+								AS [Measures].[Discount]/[Measures].[Price]*100,
+								VISIBLE = 1  ;
+								CREATE MEMBER CURRENTCUBE.[Measures].[Profit Margin]
+								AS [Measures].[Price] + ([Measures].[Price]-[Measures].[Price]*[Measures].[Discount]/100),
+								FORMAT_STRING = "Standard",
+								VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'Facts';
+							</Text>
+						</Command>
+					</Commands>
+				</MdxScript>
+			</MdxScripts>
+			<Kpis>
+				<Kpi>
+					<ID>KPI</ID>
+					<Name>Gross Profit</Name>
+					<AssociatedMeasureGroupID>Facts</AssociatedMeasureGroupID>
+					<Value>[Measures].[Profit Margin]</Value>
+					<Goal>
+						Case
+						When [Dim Genre].[Title]
+						Is [Dim Genre].[Title].[Casual]
+						Then .500
+						When [Dim Genre].[Title]
+						Is [Dim Genre].[Title].[Formal]
+						Then .600
+						Else .900
+						End
+					</Goal>
+					<Status>
+						Case
+						When KpiValue("Gross Profit") / KpiGoal("Gross Profit") &gt; .90
+						Then 1
+						When KpiValue("Gross Profit") / KpiGoal("Gross Profit") &lt;= .90
+						And
+						KpiValue("Gross Profit") / KpiGoal("Gross Profit") &gt; .80
+						Then 0
+						Else -1
+						End
+					</Status>
+					<Trend>IIF([Measures].[Profit Margin] &gt; 6000, 1, -1)</Trend>
+					<TrendGraphic>Smiley Face</TrendGraphic>
+					<StatusGraphic>Traffic Light</StatusGraphic>
+				</Kpi>
+				<Kpi>
+					<ID>KPI 1</ID>
+					<Name>Expected Discount</Name>
+					<AssociatedMeasureGroupID>Facts</AssociatedMeasureGroupID>
+					<Value>[Measures].[DiscountPr]</Value>
+					<Goal>
+						Case
+						When [Dim Publisher].[Name]
+						Is [Dim Publisher].[Name].[Erway]
+						Then .18
+						When [Dim Publisher].[Name]
+						Is [Dim Publisher].[Name].[Rick Ross]
+						Then .11
+						Else .5
+						End
+					</Goal>
+					<Status>
+						Case
+						When KpiValue("Expected Discount") / KpiGoal("Expected Discount") &gt; .90
+						Then 1
+						When KpiValue("Expected Discount") / KpiGoal("Expected Discount") &lt;= .90
+						And
+						KpiValue("Expected Discount") / KpiGoal("Expected Discount") &gt; .80
+						Then 0
+						Else -1
+						End
+					</Status>
+					<Trend>IIF([Measures].[DiscountPr] &lt; 7, 1, -1)</Trend>
+					<TrendGraphic>Smiley Face</TrendGraphic>
+					<StatusGraphic>Traffic Light</StatusGraphic>
+				</Kpi>
+			</Kpis>
+			<ProactiveCaching>
+				<SilenceInterval>-PT1S</SilenceInterval>
+				<Latency>-PT1S</Latency>
+				<SilenceOverrideInterval>-PT1S</SilenceOverrideInterval>
+				<ForceRebuildInterval>-PT1S</ForceRebuildInterval>
+				<Source xsi:type="ProactiveCachingInheritedBinding" />
+			</ProactiveCaching>
+		</Cube>
+	</ObjectDefinition>
+</Alter>
+
