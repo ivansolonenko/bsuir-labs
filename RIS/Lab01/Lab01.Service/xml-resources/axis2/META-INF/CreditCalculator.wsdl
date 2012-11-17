@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:axis2="http://lab01/services" xmlns:ns1="http://lab01/services/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns0="http://models.lab01/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://lab01/services">
+    <wsdl:types>
+        <xs:schema xmlns:ax21="http://models.lab01/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://models.lab01/xsd">
+            <xs:complexType name="Credit">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="creditSum" nillable="true" type="xs:double"/>
+                    <xs:element minOccurs="0" name="monthsCount" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="0" name="percents" nillable="true" type="xs:double"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema xmlns:ns="http://lab01/services/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://lab01/services/xsd">
+            <xs:element name="GetAnnuitentPayment">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="monthsCount" type="xs:int"/>
+                        <xs:element minOccurs="0" name="creditSum" type="xs:double"/>
+                        <xs:element minOccurs="0" name="percents" type="xs:double"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetAnnuitentPaymentResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" type="xs:double"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="GetCreditsResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="ns0:Credit"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="GetAnnuitentPaymentRequest">
+        <wsdl:part name="parameters" element="ns1:GetAnnuitentPayment"/>
+    </wsdl:message>
+    <wsdl:message name="GetAnnuitentPaymentResponse">
+        <wsdl:part name="parameters" element="ns1:GetAnnuitentPaymentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="GetCreditsRequest"/>
+    <wsdl:message name="GetCreditsResponse">
+        <wsdl:part name="parameters" element="ns1:GetCreditsResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="CreditCalculatorPortType">
+        <wsdl:operation name="GetAnnuitentPayment">
+            <wsdl:input message="axis2:GetAnnuitentPaymentRequest" wsaw:Action="urn:GetAnnuitentPayment"/>
+            <wsdl:output message="axis2:GetAnnuitentPaymentResponse" wsaw:Action="urn:GetAnnuitentPaymentResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetCredits">
+            <wsdl:input message="axis2:GetCreditsRequest" wsaw:Action="urn:GetCredits"/>
+            <wsdl:output message="axis2:GetCreditsResponse" wsaw:Action="urn:GetCreditsResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="CreditCalculatorSOAP11Binding" type="axis2:CreditCalculatorPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="GetAnnuitentPayment">
+            <soap:operation soapAction="urn:GetAnnuitentPayment" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetCredits">
+            <soap:operation soapAction="urn:GetCredits" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="CreditCalculatorSOAP12Binding" type="axis2:CreditCalculatorPortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="GetAnnuitentPayment">
+            <soap12:operation soapAction="urn:GetAnnuitentPayment" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetCredits">
+            <soap12:operation soapAction="urn:GetCredits" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="CreditCalculatorHttpBinding" type="axis2:CreditCalculatorPortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="GetAnnuitentPayment">
+            <http:operation location="CreditCalculator/GetAnnuitentPayment"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="GetAnnuitentPayment"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="GetAnnuitentPayment"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetCredits">
+            <http:operation location="CreditCalculator/GetCredits"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="GetCredits"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="GetCredits"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="CreditCalculator">
+        <wsdl:port name="CreditCalculatorSOAP11port_http" binding="axis2:CreditCalculatorSOAP11Binding">
+            <soap:address location="http://localhost:8080/axis2/services/CreditCalculator"/>
+        </wsdl:port>
+        <wsdl:port name="CreditCalculatorSOAP12port_http" binding="axis2:CreditCalculatorSOAP12Binding">
+            <soap12:address location="http://localhost:8080/axis2/services/CreditCalculator"/>
+        </wsdl:port>
+        <wsdl:port name="CreditCalculatorHttpport" binding="axis2:CreditCalculatorHttpBinding">
+            <http:address location="http://localhost:8080/axis2/services/CreditCalculator"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

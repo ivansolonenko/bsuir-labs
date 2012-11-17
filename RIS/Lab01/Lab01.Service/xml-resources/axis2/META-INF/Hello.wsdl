@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:axis2="http://lab01/services/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ns0="http://lab01/services/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://lab01/services/">
+    <wsdl:types>
+        <xs:schema xmlns:ns="http://lab01/services/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://lab01/services/xsd">
+            <xs:element name="add">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="x" type="xs:int"/>
+                        <xs:element minOccurs="0" name="y" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="addResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="helloResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="helloRequest"/>
+    <wsdl:message name="helloResponse">
+        <wsdl:part name="parameters" element="ns0:helloResponse"/>
+    </wsdl:message>
+    <wsdl:message name="addRequest">
+        <wsdl:part name="parameters" element="ns0:add"/>
+    </wsdl:message>
+    <wsdl:message name="addResponse">
+        <wsdl:part name="parameters" element="ns0:addResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="HelloPortType">
+        <wsdl:operation name="hello">
+            <wsdl:input message="axis2:helloRequest" wsaw:Action="urn:hello"/>
+            <wsdl:output message="axis2:helloResponse" wsaw:Action="urn:helloResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="add">
+            <wsdl:input message="axis2:addRequest" wsaw:Action="urn:add"/>
+            <wsdl:output message="axis2:addResponse" wsaw:Action="urn:addResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="HelloSOAP11Binding" type="axis2:HelloPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="hello">
+            <soap:operation soapAction="urn:hello" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="add">
+            <soap:operation soapAction="urn:add" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="HelloSOAP12Binding" type="axis2:HelloPortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="hello">
+            <soap12:operation soapAction="urn:hello" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="add">
+            <soap12:operation soapAction="urn:add" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="HelloHttpBinding" type="axis2:HelloPortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="hello">
+            <http:operation location="Hello/hello"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="hello"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="hello"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="add">
+            <http:operation location="Hello/add"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="add"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="add"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="Hello">
+        <wsdl:port name="HelloSOAP11port_http" binding="axis2:HelloSOAP11Binding">
+            <soap:address location="http://localhost:8080/axis2/services/Hello"/>
+        </wsdl:port>
+        <wsdl:port name="HelloSOAP12port_http" binding="axis2:HelloSOAP12Binding">
+            <soap12:address location="http://localhost:8080/axis2/services/Hello"/>
+        </wsdl:port>
+        <wsdl:port name="HelloHttpport" binding="axis2:HelloHttpBinding">
+            <http:address location="http://localhost:8080/axis2/services/Hello"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<axis2 xmlns="http://www.netbeans.org/ns/axis2/1">
+    <service name="Hello">
+        <service-class>lab01.services.Hello</service-class>
+        <generate-wsdl targetNamespace="http://lab01/services/" schemaNamespace="http://lab01/services/xsd"/>
+    </service>
+    <service name="CreditCalculator">
+        <service-class>lab01.services.CreditCalculator</service-class>
+        <generate-wsdl targetNamespace="http://lab01/services" schemaNamespace="http://lab01/services/xsd"/>
+    </service>
+</axis2>
