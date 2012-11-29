@@ -1,5 +1,5 @@
 ﻿using System;
-using System.IO;
+using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 
@@ -7,48 +7,69 @@ namespace Lab04.Server
 {
 	public static class ThreadClass
 	{
-		private const String FileName = @"C:\Users\Public\Documents\treeStorage.txt";
-		private static NetworkStream _networkStream;
+		private const String Filename = @"C:\Users\Public\Documents\treeStorage.txt";
+		private const int MessageLength = 1024;
 
 		public static void ThreadOperations(object clientObj)
 		{
 			var client = clientObj as TcpClient;
 			if (client == null)
 				return;
-			_networkStream = client.GetStream();
+			var ns = client.GetStream();
 
-			//функции начинается с чтения запроса из потока:
-			//Создаем новую переменную типа byte[]
-			var received = new byte[256];
-			//С помощью сетевого потока считываем в переменную received данные от клиента
-			_networkStream.Read(received, 0, received.Length);
+			var received = new byte[MessageLength];
+			ns.Read(received, 0, received.Length);
 
-			var str = Encoding.UTF8.GetString(received);
-			var cmd = str.Substring(0, str.IndexOf('|'));
-			var val = str.Substring(str.IndexOf('|') + 1, str.IndexOf('\0'));
+			var request = Encoding.UTF8.GetString(received).Trim('\0');
+			var cmd = request.Substring(0, request.IndexOf('|'));
+			var val = request.Substring(request.IndexOf('|') + 1);
 
-			if (cmd == "view")
+			var storage = new Storage<dynamic> { Filename = Filename };
+
+			switch (cmd)
 			{
-				// Создаем переменную типа byte[] для отправки ответа клиенту
-				//Создаем объект класса FileStream для последующего чтения информации из файла
-				var fstr = new FileStream(FileName, FileMode.Open, FileAccess.Read);
-				var sr = new StreamReader(fstr);
-				//Запись в переменную sent содержания прочитанного файла
-				byte[] sent = Encoding.UTF8.GetBytes(sr.ReadToEnd());
-				sr.Close();
-				fstr.Close();
-				//Отправка информации клиенту
-				_networkStream.Write(sent, 0, sent.Length);
-			}
-			else if (cmd == "add")
-			{
-				var fstr = new FileStream(FileName, FileMode.Append, FileAccess.Write);
-				var sr = new StreamWriter(fstr);
-				sr.Write(val);
-				byte[] sent = Encoding.UTF8.GetBytes(val);
-				sr.Close();
-				fstr.Close();
-				_networkStream.Write(sent, 0, sent.Length);
+				case "view":
+					{
+						var bytes = storage.View();
+						ns.Write(bytes, 0, bytes.Length);
+					}
+					break;
+				case "add":
+					{
+						var bytes = storage.Add(val, (objects, o) =>
+												{
+													int id = objects.Count > 0 ? objects.ElementAt(objects.Count - 1).Id : 0;
+													o.Id = ++id;
+												});
+						ns.Write(bytes, 0, bytes.Length);
+					}
+					break;
+				case "delete":
+					{
+						var bytes = storage.Delete(val, (objects, o) => objects.SingleOrDefault(x => x.Id == o.Id));
+						ns.Write(bytes, 0, bytes.Length);
+					}
+					break;
+				case "edit":
+					{
+						var bytes = storage.Edit(val,
+												(objects, o) => objects.SingleOrDefault(x => x.Id == o.Id),
+												(x, y) => { x.District = y.District; x.Tree = y.Tree; x.Amount = y.Amount; });
+						ns.Write(bytes, 0, bytes.Length);
+					}
+					break;
+				case "find":
+					{
+						var bytes = storage.Filter(val, (objects, o) => objects.Where(x => x.Amount == o.Amount));
+						ns.Write(bytes, 0, bytes.Length);
+					}
+					break;
+				case "sort":
+					{
+						var bytes = storage.Filter(val, (objects, o) => objects.OrderBy(x => x.Amount));
+						ns.Write(bytes, 0, bytes.Length);
+					}
+					break;
 			}
 		}
 	}

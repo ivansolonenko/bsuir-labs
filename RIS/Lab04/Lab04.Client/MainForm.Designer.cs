@@ -44,12 +44,14 @@
 			this.txtTree = new System.Windows.Forms.TextBox();
 			this.txtAmount = new System.Windows.Forms.TextBox();
 			this.rtbContent = new System.Windows.Forms.RichTextBox();
+			this.lblId = new System.Windows.Forms.Label();
+			this.txtId = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// lbServiceInfo
 			// 
 			this.lbServiceInfo.FormattingEnabled = true;
-			this.lbServiceInfo.Location = new System.Drawing.Point(262, 133);
+			this.lbServiceInfo.Location = new System.Drawing.Point(305, 133);
 			this.lbServiceInfo.Name = "lbServiceInfo";
 			this.lbServiceInfo.Size = new System.Drawing.Size(237, 56);
 			this.lbServiceInfo.TabIndex = 0;
@@ -57,7 +59,7 @@
 			// rbView
 			// 
 			this.rbView.AutoSize = true;
-			this.rbView.Location = new System.Drawing.Point(181, 13);
+			this.rbView.Location = new System.Drawing.Point(224, 13);
 			this.rbView.Name = "rbView";
 			this.rbView.Size = new System.Drawing.Size(93, 17);
 			this.rbView.TabIndex = 1;
@@ -68,7 +70,7 @@
 			// rbAdd
 			// 
 			this.rbAdd.AutoSize = true;
-			this.rbAdd.Location = new System.Drawing.Point(181, 37);
+			this.rbAdd.Location = new System.Drawing.Point(224, 37);
 			this.rbAdd.Name = "rbAdd";
 			this.rbAdd.Size = new System.Drawing.Size(75, 17);
 			this.rbAdd.TabIndex = 2;
@@ -79,39 +81,39 @@
 			// rbDelete
 			// 
 			this.rbDelete.AutoSize = true;
-			this.rbDelete.Enabled = false;
-			this.rbDelete.Location = new System.Drawing.Point(181, 61);
+			this.rbDelete.Location = new System.Drawing.Point(224, 61);
 			this.rbDelete.Name = "rbDelete";
 			this.rbDelete.Size = new System.Drawing.Size(68, 17);
 			this.rbDelete.TabIndex = 3;
 			this.rbDelete.Text = "Удалить";
 			this.rbDelete.UseVisualStyleBackColor = true;
+			this.rbDelete.CheckedChanged += new System.EventHandler(this.rbDelete_CheckedChanged);
 			// 
 			// rbEdit
 			// 
 			this.rbEdit.AutoSize = true;
-			this.rbEdit.Enabled = false;
-			this.rbEdit.Location = new System.Drawing.Point(181, 85);
+			this.rbEdit.Location = new System.Drawing.Point(224, 85);
 			this.rbEdit.Name = "rbEdit";
 			this.rbEdit.Size = new System.Drawing.Size(102, 17);
 			this.rbEdit.TabIndex = 4;
 			this.rbEdit.Text = "Редактировать";
 			this.rbEdit.UseVisualStyleBackColor = true;
+			this.rbEdit.CheckedChanged += new System.EventHandler(this.rbEdit_CheckedChanged);
 			// 
 			// rbFind
 			// 
 			this.rbFind.AutoSize = true;
-			this.rbFind.Enabled = false;
-			this.rbFind.Location = new System.Drawing.Point(181, 109);
+			this.rbFind.Location = new System.Drawing.Point(224, 109);
 			this.rbFind.Name = "rbFind";
 			this.rbFind.Size = new System.Drawing.Size(56, 17);
 			this.rbFind.TabIndex = 5;
 			this.rbFind.Text = "Найти";
 			this.rbFind.UseVisualStyleBackColor = true;
+			this.rbFind.CheckedChanged += new System.EventHandler(this.rbFind_CheckedChanged);
 			// 
 			// btnExecute
 			// 
-			this.btnExecute.Location = new System.Drawing.Point(181, 133);
+			this.btnExecute.Location = new System.Drawing.Point(224, 133);
 			this.btnExecute.Name = "btnExecute";
 			this.btnExecute.Size = new System.Drawing.Size(75, 23);
 			this.btnExecute.TabIndex = 6;
@@ -121,12 +123,13 @@
 			// 
 			// btnSendToServer
 			// 
-			this.btnSendToServer.Location = new System.Drawing.Point(141, 166);
+			this.btnSendToServer.Location = new System.Drawing.Point(184, 166);
 			this.btnSendToServer.Name = "btnSendToServer";
 			this.btnSendToServer.Size = new System.Drawing.Size(115, 23);
 			this.btnSendToServer.TabIndex = 7;
 			this.btnSendToServer.Text = "Послать на сервер";
 			this.btnSendToServer.UseVisualStyleBackColor = true;
+			this.btnSendToServer.Visible = false;
 			// 
 			// cbShowStatus
 			// 
@@ -141,7 +144,7 @@
 			// 
 			// txtDistrict
 			// 
-			this.txtDistrict.Location = new System.Drawing.Point(399, 61);
+			this.txtDistrict.Location = new System.Drawing.Point(442, 61);
 			this.txtDistrict.Name = "txtDistrict";
 			this.txtDistrict.Size = new System.Drawing.Size(100, 20);
 			this.txtDistrict.TabIndex = 9;
@@ -149,7 +152,7 @@
 			// lblDistrict
 			// 
 			this.lblDistrict.AutoSize = true;
-			this.lblDistrict.Location = new System.Drawing.Point(307, 65);
+			this.lblDistrict.Location = new System.Drawing.Point(350, 65);
 			this.lblDistrict.Name = "lblDistrict";
 			this.lblDistrict.Size = new System.Drawing.Size(38, 13);
 			this.lblDistrict.TabIndex = 10;
@@ -158,7 +161,7 @@
 			// lblTree
 			// 
 			this.lblTree.AutoSize = true;
-			this.lblTree.Location = new System.Drawing.Point(307, 89);
+			this.lblTree.Location = new System.Drawing.Point(350, 89);
 			this.lblTree.Name = "lblTree";
 			this.lblTree.Size = new System.Drawing.Size(46, 13);
 			this.lblTree.TabIndex = 11;
@@ -167,7 +170,7 @@
 			// lblAmount
 			// 
 			this.lblAmount.AutoSize = true;
-			this.lblAmount.Location = new System.Drawing.Point(307, 111);
+			this.lblAmount.Location = new System.Drawing.Point(350, 111);
 			this.lblAmount.Name = "lblAmount";
 			this.lblAmount.Size = new System.Drawing.Size(66, 13);
 			this.lblAmount.TabIndex = 12;
@@ -175,14 +178,14 @@
 			// 
 			// txtTree
 			// 
-			this.txtTree.Location = new System.Drawing.Point(399, 85);
+			this.txtTree.Location = new System.Drawing.Point(442, 85);
 			this.txtTree.Name = "txtTree";
 			this.txtTree.Size = new System.Drawing.Size(100, 20);
 			this.txtTree.TabIndex = 13;
 			// 
 			// txtAmount
 			// 
-			this.txtAmount.Location = new System.Drawing.Point(399, 109);
+			this.txtAmount.Location = new System.Drawing.Point(442, 109);
 			this.txtAmount.Name = "txtAmount";
 			this.txtAmount.Size = new System.Drawing.Size(100, 20);
 			this.txtAmount.TabIndex = 14;
@@ -191,15 +194,34 @@
 			// 
 			this.rtbContent.Location = new System.Drawing.Point(13, 13);
 			this.rtbContent.Name = "rtbContent";
-			this.rtbContent.Size = new System.Drawing.Size(162, 143);
+			this.rtbContent.Size = new System.Drawing.Size(200, 143);
 			this.rtbContent.TabIndex = 15;
 			this.rtbContent.Text = "";
+			// 
+			// lblId
+			// 
+			this.lblId.AutoSize = true;
+			this.lblId.Location = new System.Drawing.Point(350, 40);
+			this.lblId.Name = "lblId";
+			this.lblId.Size = new System.Drawing.Size(16, 13);
+			this.lblId.TabIndex = 16;
+			this.lblId.Text = "Id";
+			// 
+			// txtId
+			// 
+			this.txtId.Location = new System.Drawing.Point(442, 37);
+			this.txtId.Name = "txtId";
+			this.txtId.Size = new System.Drawing.Size(100, 20);
+			this.txtId.TabIndex = 17;
+			this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
 			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(511, 200);
+			this.ClientSize = new System.Drawing.Size(554, 200);
+			this.Controls.Add(this.txtId);
+			this.Controls.Add(this.lblId);
 			this.Controls.Add(this.rtbContent);
 			this.Controls.Add(this.txtAmount);
 			this.Controls.Add(this.txtTree);
@@ -241,6 +263,8 @@
 		private System.Windows.Forms.TextBox txtTree;
 		private System.Windows.Forms.TextBox txtAmount;
 		private System.Windows.Forms.RichTextBox rtbContent;
+		private System.Windows.Forms.Label lblId;
+		private System.Windows.Forms.TextBox txtId;
 	}
 }
 
