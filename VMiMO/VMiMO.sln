@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab04", "lab04\lab04.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab05", "lab05\lab05.csproj", "{94BD98ED-3FE7-490F-8526-E2504DB32F4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab06", "lab06\lab06.csproj", "{B6E66183-C332-49E4-AA9A-053535B77098}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -87,6 +89,16 @@ Global
 		{94BD98ED-3FE7-490F-8526-E2504DB32F4E}.Release|Mixed Platforms.Build.0 = Release|x86
 		{94BD98ED-3FE7-490F-8526-E2504DB32F4E}.Release|x86.ActiveCfg = Release|x86
 		{94BD98ED-3FE7-490F-8526-E2504DB32F4E}.Release|x86.Build.0 = Release|x86
+		{B6E66183-C332-49E4-AA9A-053535B77098}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{B6E66183-C332-49E4-AA9A-053535B77098}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{B6E66183-C332-49E4-AA9A-053535B77098}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{B6E66183-C332-49E4-AA9A-053535B77098}.Debug|x86.ActiveCfg = Debug|x86
+		{B6E66183-C332-49E4-AA9A-053535B77098}.Debug|x86.Build.0 = Debug|x86
+		{B6E66183-C332-49E4-AA9A-053535B77098}.Release|Any CPU.ActiveCfg = Release|x86
+		{B6E66183-C332-49E4-AA9A-053535B77098}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{B6E66183-C332-49E4-AA9A-053535B77098}.Release|Mixed Platforms.Build.0 = Release|x86
+		{B6E66183-C332-49E4-AA9A-053535B77098}.Release|x86.ActiveCfg = Release|x86
+		{B6E66183-C332-49E4-AA9A-053535B77098}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
