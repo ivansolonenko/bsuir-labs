@@ -6,6 +6,8 @@ Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Lab03", "Lab03\Lab03.ssmssq
 EndProject
 Project("{54D695D8-3FC1-47A3-8D60-959ECE458279}") = "Lab04", "Lab04\Lab04.ssmsasproj", "{AF148AC7-2920-42C5-BA1C-4811BE618AD6}"
 EndProject
+Project("{54D695D8-3FC1-47A3-8D60-959ECE458279}") = "Lab05", "Lab05\Lab05.ssmsasproj", "{A976754E-885F-4E54-AE16-1015915AF8D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
