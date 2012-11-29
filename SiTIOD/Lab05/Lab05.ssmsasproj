@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlAsProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Lab05">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="(local):cruazer-laptop\cruazer">
+          <Created>2012-11-23T16:27:45.109538+03:00</Created>
+          <Type>Analysis Server</Type>
+          <Server>(local)</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="1" Sorted="true">
+      <Items>
+        <FileNode Name="MDXQuery01.mdx">
+          <AssociatedConnectionMoniker>1396ffcb-10d7-4f8c-aaef-4696d541f554:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MDXQuery01.mdx</FullPath>
+        </FileNode>
+        <FileNode Name="MDXQuery02.mdx">
+          <AssociatedConnectionMoniker>1396ffcb-10d7-4f8c-aaef-4696d541f554:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MDXQuery02.mdx</FullPath>
+        </FileNode>
+        <FileNode Name="MDXQuery03.mdx">
+          <AssociatedConnectionMoniker>1396ffcb-10d7-4f8c-aaef-4696d541f554:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MDXQuery03.mdx</FullPath>
+        </FileNode>
+        <FileNode Name="MDXQuery04.mdx">
+          <AssociatedConnectionMoniker>1396ffcb-10d7-4f8c-aaef-4696d541f554:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MDXQuery04.mdx</FullPath>
+        </FileNode>
+        <FileNode Name="MDXQuery05.mdx">
+          <AssociatedConnectionMoniker>1396ffcb-10d7-4f8c-aaef-4696d541f554:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MDXQuery05.mdx</FullPath>
+        </FileNode>
+        <FileNode Name="MDXQuery06.mdx">
+          <AssociatedConnectionMoniker>1396ffcb-10d7-4f8c-aaef-4696d541f554:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MDXQuery06.mdx</FullPath>
+        </FileNode>
+        <FileNode Name="MDXQuery07.mdx">
+          <AssociatedConnectionMoniker>1396ffcb-10d7-4f8c-aaef-4696d541f554:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MDXQuery07.mdx</FullPath>
+        </FileNode>
+        <FileNode Name="MDXQuery08.mdx">
+          <AssociatedConnectionMoniker>1396ffcb-10d7-4f8c-aaef-4696d541f554:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MDXQuery08.mdx</FullPath>
+        </FileNode>
+        <FileNode Name="MDXQuery09.mdx">
+          <AssociatedConnectionMoniker>1396ffcb-10d7-4f8c-aaef-4696d541f554:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MDXQuery09.mdx</FullPath>
+        </FileNode>
+        <FileNode Name="MDXQuery10.mdx">
+          <AssociatedConnectionMoniker>1396ffcb-10d7-4f8c-aaef-4696d541f554:(local):True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>(local)</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>MDXQuery10.mdx</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlAsProject>

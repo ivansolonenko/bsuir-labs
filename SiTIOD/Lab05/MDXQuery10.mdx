@@ -1,0 +1,9 @@
+SELECT 
+NON EMPTY
+{[T Department].[Department Title].[Department Title]} ON COLUMNS,
+{FILTER(
+	[T Employee].[Employee Surname].[Employee Surname],
+	[T Region].[Region Title].[Region Title].&[г.Барановичи])
+	} ON ROWS
+FROM [Lab02]
+WHERE [Measures].[Age]

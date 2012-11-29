@@ -1,0 +1,12 @@
+SELECT 
+NON EMPTY
+{[T Occupation].[Occupation Rate].[Occupation Rate]} ON COLUMNS,
+{FILTER(
+	[T Employee].[Employee Surname].[Employee Surname],
+	AGGREGATE({
+		[T Working Experience].[Workingexperience Years].[Workingexperience Years].&[1],
+		[T Working Experience].[Workingexperience Years].[Workingexperience Years].&[2]
+		})
+	)} ON ROWS
+FROM [Lab02]
+WHERE [Measures].[Age]

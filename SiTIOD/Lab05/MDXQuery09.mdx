@@ -1,0 +1,8 @@
+SELECT 
+NON EMPTY
+{[T Department].[Department Title].[Department Title]} ON COLUMNS,
+{FILTER(
+	[T Employee].[Employee Surname].[Employee Surname],[T Citizenship].[Citizenship Title].&[Беларус])
+	} ON ROWS
+FROM [Lab02]
+WHERE [Measures].[Age]
