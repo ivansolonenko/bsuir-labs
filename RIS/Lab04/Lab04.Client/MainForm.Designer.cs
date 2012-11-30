@@ -46,12 +46,13 @@
 			this.rtbContent = new System.Windows.Forms.RichTextBox();
 			this.lblId = new System.Windows.Forms.Label();
 			this.txtId = new System.Windows.Forms.TextBox();
+			this.rbSort = new System.Windows.Forms.RadioButton();
 			this.SuspendLayout();
 			// 
 			// lbServiceInfo
 			// 
 			this.lbServiceInfo.FormattingEnabled = true;
-			this.lbServiceInfo.Location = new System.Drawing.Point(305, 133);
+			this.lbServiceInfo.Location = new System.Drawing.Point(305, 155);
 			this.lbServiceInfo.Name = "lbServiceInfo";
 			this.lbServiceInfo.Size = new System.Drawing.Size(237, 56);
 			this.lbServiceInfo.TabIndex = 0;
@@ -113,7 +114,7 @@
 			// 
 			// btnExecute
 			// 
-			this.btnExecute.Location = new System.Drawing.Point(224, 133);
+			this.btnExecute.Location = new System.Drawing.Point(224, 155);
 			this.btnExecute.Name = "btnExecute";
 			this.btnExecute.Size = new System.Drawing.Size(75, 23);
 			this.btnExecute.TabIndex = 6;
@@ -123,7 +124,7 @@
 			// 
 			// btnSendToServer
 			// 
-			this.btnSendToServer.Location = new System.Drawing.Point(184, 166);
+			this.btnSendToServer.Location = new System.Drawing.Point(184, 188);
 			this.btnSendToServer.Name = "btnSendToServer";
 			this.btnSendToServer.Size = new System.Drawing.Size(115, 23);
 			this.btnSendToServer.TabIndex = 7;
@@ -134,7 +135,7 @@
 			// cbShowStatus
 			// 
 			this.cbShowStatus.AutoSize = true;
-			this.cbShowStatus.Location = new System.Drawing.Point(12, 170);
+			this.cbShowStatus.Location = new System.Drawing.Point(13, 192);
 			this.cbShowStatus.Name = "cbShowStatus";
 			this.cbShowStatus.Size = new System.Drawing.Size(125, 17);
 			this.cbShowStatus.TabIndex = 8;
@@ -194,7 +195,7 @@
 			// 
 			this.rtbContent.Location = new System.Drawing.Point(13, 13);
 			this.rtbContent.Name = "rtbContent";
-			this.rtbContent.Size = new System.Drawing.Size(200, 143);
+			this.rtbContent.Size = new System.Drawing.Size(200, 170);
 			this.rtbContent.TabIndex = 15;
 			this.rtbContent.Text = "";
 			// 
@@ -215,11 +216,24 @@
 			this.txtId.TabIndex = 17;
 			this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
 			// 
+			// rbSort
+			// 
+			this.rbSort.AutoSize = true;
+			this.rbSort.Location = new System.Drawing.Point(224, 132);
+			this.rbSort.Name = "rbSort";
+			this.rbSort.Size = new System.Drawing.Size(85, 17);
+			this.rbSort.TabIndex = 18;
+			this.rbSort.TabStop = true;
+			this.rbSort.Text = "Сортировка";
+			this.rbSort.UseVisualStyleBackColor = true;
+			this.rbSort.CheckedChanged += new System.EventHandler(this.rbSort_CheckedChanged);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(554, 200);
+			this.ClientSize = new System.Drawing.Size(554, 222);
+			this.Controls.Add(this.rbSort);
 			this.Controls.Add(this.txtId);
 			this.Controls.Add(this.lblId);
 			this.Controls.Add(this.rtbContent);
@@ -265,6 +279,7 @@
 		private System.Windows.Forms.RichTextBox rtbContent;
 		private System.Windows.Forms.Label lblId;
 		private System.Windows.Forms.TextBox txtId;
+		private System.Windows.Forms.RadioButton rbSort;
 	}
 }
 

@@ -56,6 +56,8 @@ namespace Lab04.Client
 				res = string.Format("edit|{0}", JsonConvert.SerializeObject(new { Id = Convert.ToInt32(txtId.Text), District = txtDistrict.Text, Tree = txtTree.Text, Amount = txtAmount.Text }));
 			else if (rbFind.Checked)
 				res = string.Format("find|{0}", JsonConvert.SerializeObject(new { Amount = txtAmount.Text }));
+			else if (rbSort.Checked)
+				res = string.Format("sort|");
 			else
 				return;
 
@@ -84,6 +86,12 @@ namespace Lab04.Client
 				status = "=> Command sent:add data";
 			else if (rbDelete.Checked)
 				status = "=> Command sent:delete data";
+			else if (rbEdit.Checked)
+				status = "=> Command sent:edit data";
+			else if (rbFind.Checked)
+				status = "=> Command sent:find data";
+			else if (rbSort.Checked)
+				status = "=> Command sent:sort data";
 
 			// Отображеем служебную информацию в клиентском ListBox
 			lbServiceInfo.Items.Add(status);
@@ -152,6 +160,19 @@ namespace Lab04.Client
 			txtDistrict.Enabled =
 			txtTree.Enabled = false;
 			txtAmount.Enabled = true;
+		}
+
+		// ReSharper disable InconsistentNaming
+		private void rbSort_CheckedChanged(object sender, EventArgs e)
+		// ReSharper restore InconsistentNaming
+		{
+			if (!rbSort.Checked)
+				return;
+
+			txtId.Enabled =
+			txtDistrict.Enabled =
+			txtTree.Enabled =
+			txtAmount.Enabled = false;
 		}
 
 		// ReSharper disable InconsistentNaming

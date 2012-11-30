@@ -66,7 +66,7 @@ namespace Lab04.Server
 					break;
 				case "sort":
 					{
-						var bytes = storage.Filter(val, (objects, o) => objects.OrderBy(x => x.Amount));
+						var bytes = storage.Filter(val, (objects, o) => objects.OrderByDescending(x => x.Amount));
 						ns.Write(bytes, 0, bytes.Length);
 					}
 					break;

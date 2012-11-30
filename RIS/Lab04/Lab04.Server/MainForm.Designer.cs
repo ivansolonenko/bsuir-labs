@@ -60,22 +60,22 @@
 			// rbMediaLibraryClass
 			// 
 			this.rbMediaLibraryClass.AutoSize = true;
-			this.rbMediaLibraryClass.Checked = true;
-			this.rbMediaLibraryClass.Location = new System.Drawing.Point(58, 205);
+			this.rbMediaLibraryClass.Location = new System.Drawing.Point(149, 205);
 			this.rbMediaLibraryClass.Name = "rbMediaLibraryClass";
 			this.rbMediaLibraryClass.Size = new System.Drawing.Size(88, 17);
-			this.rbMediaLibraryClass.TabIndex = 1;
-			this.rbMediaLibraryClass.TabStop = true;
+			this.rbMediaLibraryClass.TabIndex = 2;
 			this.rbMediaLibraryClass.Text = "Media Library";
 			this.rbMediaLibraryClass.UseVisualStyleBackColor = true;
 			// 
 			// rbThreadClass
 			// 
 			this.rbThreadClass.AutoSize = true;
-			this.rbThreadClass.Location = new System.Drawing.Point(149, 205);
+			this.rbThreadClass.Checked = true;
+			this.rbThreadClass.Location = new System.Drawing.Point(58, 205);
 			this.rbThreadClass.Name = "rbThreadClass";
 			this.rbThreadClass.Size = new System.Drawing.Size(52, 17);
-			this.rbThreadClass.TabIndex = 2;
+			this.rbThreadClass.TabIndex = 1;
+			this.rbThreadClass.TabStop = true;
 			this.rbThreadClass.Text = "Trees";
 			this.rbThreadClass.UseVisualStyleBackColor = true;
 			// 
