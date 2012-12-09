@@ -49,6 +49,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\glyphicons-halflings-white.png" />
     <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Cookery.aspx" />
+    <Content Include="CookeryModel.edmx.sql" />
     <Content Include="CurrencyExchange.aspx" />
     <Content Include="CurrencyExchangeModel.edmx.sql" />
     <Content Include="Default.aspx" />
@@ -64,6 +66,18 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cookery.aspx.cs">
+      <DependentUpon>Cookery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cookery.aspx.designer.cs">
+      <DependentUpon>Cookery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CookeryModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CookeryModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="CurrencyExchange.aspx.cs">
       <DependentUpon>CurrencyExchange.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -90,6 +104,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="CookeryModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CookeryModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="CurrencyExchangeModel.edmx">
