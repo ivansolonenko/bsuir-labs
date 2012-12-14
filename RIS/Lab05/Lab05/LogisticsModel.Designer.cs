@@ -16,6 +16,11 @@ using System.Xml.Serialization;
 using System.Runtime.Serialization;
 
 [assembly: EdmSchemaAttribute()]
+#region EDM Relationship Metadata
+
+[assembly: EdmRelationshipAttribute("LogisticsModel", "CargoCar", "Cargo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Lab05.Cargo), "Car", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Lab05.Car))]
+
+#endregion
 
 namespace Lab05
 {
@@ -68,52 +73,52 @@ namespace Lab05
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Cargo> CargoSet
+        public ObjectSet<Cargo> Cargos
         {
             get
             {
-                if ((_CargoSet == null))
+                if ((_Cargos == null))
                 {
-                    _CargoSet = base.CreateObjectSet<Cargo>("CargoSet");
+                    _Cargos = base.CreateObjectSet<Cargo>("Cargos");
                 }
-                return _CargoSet;
+                return _Cargos;
             }
         }
-        private ObjectSet<Cargo> _CargoSet;
+        private ObjectSet<Cargo> _Cargos;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Car> CarSet
+        public ObjectSet<Car> Cars
         {
             get
             {
-                if ((_CarSet == null))
+                if ((_Cars == null))
                 {
-                    _CarSet = base.CreateObjectSet<Car>("CarSet");
+                    _Cars = base.CreateObjectSet<Car>("Cars");
                 }
-                return _CarSet;
+                return _Cars;
             }
         }
-        private ObjectSet<Car> _CarSet;
+        private ObjectSet<Car> _Cars;
 
         #endregion
         #region AddTo Methods
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the CargoSet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the Cargos EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToCargoSet(Cargo cargo)
+        public void AddToCargos(Cargo cargo)
         {
-            base.AddObject("CargoSet", cargo);
+            base.AddObject("Cargos", cargo);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the CarSet EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the Cars EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToCarSet(Car car)
+        public void AddToCars(Car car)
         {
-            base.AddObject("CarSet", car);
+            base.AddObject("Cars", car);
         }
 
         #endregion
@@ -138,12 +143,16 @@ namespace Lab05
         /// Create a new Car object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="name">Initial value of the Name property.</param>
         /// <param name="capacity">Initial value of the Capacity property.</param>
-        public static Car CreateCar(global::System.Int32 id, global::System.Int32 capacity)
+        /// <param name="trips">Initial value of the Trips property.</param>
+        public static Car CreateCar(global::System.Int32 id, global::System.String name, global::System.Double capacity, global::System.Int32 trips)
         {
             Car car = new Car();
             car.Id = id;
+            car.Name = name;
             car.Capacity = capacity;
+            car.Trips = trips;
             return car;
         }
 
@@ -182,7 +191,31 @@ namespace Lab05
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 Capacity
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Name");
+                OnNameChanged();
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Double Capacity
         {
             get
             {
@@ -197,12 +230,77 @@ namespace Lab05
                 OnCapacityChanged();
             }
         }
-        private global::System.Int32 _Capacity;
-        partial void OnCapacityChanging(global::System.Int32 value);
+        private global::System.Double _Capacity;
+        partial void OnCapacityChanging(global::System.Double value);
         partial void OnCapacityChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Trips
+        {
+            get
+            {
+                return _Trips;
+            }
+            set
+            {
+                OnTripsChanging(value);
+                ReportPropertyChanging("Trips");
+                _Trips = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Trips");
+                OnTripsChanged();
+            }
+        }
+        private global::System.Int32 _Trips;
+        partial void OnTripsChanging(global::System.Int32 value);
+        partial void OnTripsChanged();
 
         #endregion
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LogisticsModel", "CargoCar", "Cargo")]
+        public Cargo Cargo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("LogisticsModel.CargoCar", "Cargo").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("LogisticsModel.CargoCar", "Cargo").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Cargo> CargoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Cargo>("LogisticsModel.CargoCar", "Cargo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Cargo>("LogisticsModel.CargoCar", "Cargo", value);
+                }
+            }
+        }
+
+        #endregion
     }
     
     /// <summary>
@@ -219,14 +317,16 @@ namespace Lab05
         /// Create a new Cargo object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        /// <param name="cargoTitle">Initial value of the CargoTitle property.</param>
-        /// <param name="cargoSize">Initial value of the CargoSize property.</param>
-        public static Cargo CreateCargo(global::System.Int32 id, global::System.String cargoTitle, global::System.Int32 cargoSize)
+        /// <param name="title">Initial value of the Title property.</param>
+        /// <param name="size">Initial value of the Size property.</param>
+        /// <param name="price">Initial value of the Price property.</param>
+        public static Cargo CreateCargo(global::System.Int32 id, global::System.String title, global::System.Int32 size, global::System.Double price)
         {
             Cargo cargo = new Cargo();
             cargo.Id = id;
-            cargo.CargoTitle = cargoTitle;
-            cargo.CargoSize = cargoSize;
+            cargo.Title = title;
+            cargo.Size = size;
+            cargo.Price = price;
             return cargo;
         }
 
@@ -265,51 +365,100 @@ namespace Lab05
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String CargoTitle
+        public global::System.String Title
         {
             get
             {
-                return _CargoTitle;
+                return _Title;
             }
             set
             {
-                OnCargoTitleChanging(value);
-                ReportPropertyChanging("CargoTitle");
-                _CargoTitle = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("CargoTitle");
-                OnCargoTitleChanged();
+                OnTitleChanging(value);
+                ReportPropertyChanging("Title");
+                _Title = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Title");
+                OnTitleChanged();
             }
         }
-        private global::System.String _CargoTitle;
-        partial void OnCargoTitleChanging(global::System.String value);
-        partial void OnCargoTitleChanged();
+        private global::System.String _Title;
+        partial void OnTitleChanging(global::System.String value);
+        partial void OnTitleChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 CargoSize
+        public global::System.Int32 Size
         {
             get
             {
-                return _CargoSize;
+                return _Size;
             }
             set
             {
-                OnCargoSizeChanging(value);
-                ReportPropertyChanging("CargoSize");
-                _CargoSize = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("CargoSize");
-                OnCargoSizeChanged();
+                OnSizeChanging(value);
+                ReportPropertyChanging("Size");
+                _Size = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Size");
+                OnSizeChanged();
             }
         }
-        private global::System.Int32 _CargoSize;
-        partial void OnCargoSizeChanging(global::System.Int32 value);
-        partial void OnCargoSizeChanged();
+        private global::System.Int32 _Size;
+        partial void OnSizeChanging(global::System.Int32 value);
+        partial void OnSizeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Double Price
+        {
+            get
+            {
+                return _Price;
+            }
+            set
+            {
+                OnPriceChanging(value);
+                ReportPropertyChanging("Price");
+                _Price = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Price");
+                OnPriceChanged();
+            }
+        }
+        private global::System.Double _Price;
+        partial void OnPriceChanging(global::System.Double value);
+        partial void OnPriceChanged();
 
         #endregion
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LogisticsModel", "CargoCar", "Car")]
+        public EntityCollection<Car> Car
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Car>("LogisticsModel.CargoCar", "Car");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Car>("LogisticsModel.CargoCar", "Car", value);
+                }
+            }
+        }
+
+        #endregion
     }
 
     #endregion

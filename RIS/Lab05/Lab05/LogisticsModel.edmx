@@ -6,70 +6,114 @@
     <edmx:StorageModels>
     <Schema Namespace="LogisticsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="LogisticsModelStoreContainer">
-    <EntitySet Name="CargoSet" EntityType="LogisticsModel.Store.CargoSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="CarSet" EntityType="LogisticsModel.Store.CarSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cargos" EntityType="LogisticsModel.Store.Cargos" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cars" EntityType="LogisticsModel.Store.Cars" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="CargoCar" Association="LogisticsModel.Store.CargoCar">
+      <End Role="Cargo" EntitySet="Cargos" />
+      <End Role="Car" EntitySet="Cars" />
+    </AssociationSet>
   </EntityContainer>
-  <EntityType Name="CargoSet">
+  <EntityType Name="Cargos">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="CargoTitle" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="CargoSize" Type="int" Nullable="false" />
+    <Property Name="Title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Size" Type="int" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" />
   </EntityType>
-  <EntityType Name="CarSet">
+  <EntityType Name="Cars">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Capacity" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Capacity" Type="float" Nullable="false" />
+    <Property Name="Trips" Type="int" Nullable="false" />
+    <Property Name="Cargo_Id" Type="int" Nullable="false" />
   </EntityType>
+  <Association Name="CargoCar">
+    <End Role="Cargo" Type="LogisticsModel.Store.Cargos" Multiplicity="1" />
+    <End Role="Car" Type="LogisticsModel.Store.Cars" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cargo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Car">
+        <PropertyRef Name="Cargo_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="LogisticsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
         <EntityContainer Name="LogisticsModelContainer" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="CargoSet" EntityType="LogisticsModel.Cargo" />
-          <EntitySet Name="CarSet" EntityType="LogisticsModel.Car" />
+          <EntitySet Name="Cargos" EntityType="LogisticsModel.Cargo" />
+          <EntitySet Name="Cars" EntityType="LogisticsModel.Car" />
+          <AssociationSet Name="CargoCar" Association="LogisticsModel.CargoCar">
+            <End EntitySet="Cargos" Role="Cargo" />
+            <End EntitySet="Cars" Role="Car" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Cargo">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="CargoTitle" Nullable="false" />
-          <Property Type="Int32" Name="CargoSize" Nullable="false" />
+          <Property Type="String" Name="Title" Nullable="false" />
+          <Property Type="Int32" Name="Size" Nullable="false" />
+          <Property Type="Double" Name="Price" Nullable="false" />
+          <NavigationProperty Name="Car" Relationship="LogisticsModel.CargoCar" FromRole="Cargo" ToRole="Car" />
         </EntityType>
         <EntityType Name="Car">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int32" Name="Capacity" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Double" Name="Capacity" Nullable="false" />
+          <Property Type="Int32" Name="Trips" Nullable="false" />
+          <NavigationProperty Name="Cargo" Relationship="LogisticsModel.CargoCar" FromRole="Car" ToRole="Cargo" />
         </EntityType>
+        <Association Name="CargoCar">
+          <End Type="LogisticsModel.Cargo" Multiplicity="1" Role="Cargo" />
+          <End Type="LogisticsModel.Car" Multiplicity="*" Role="Car" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
     <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="LogisticsModelStoreContainer" CdmEntityContainer="LogisticsModelContainer">
-    <EntitySetMapping Name="CargoSet">
+    <EntitySetMapping Name="Cargos">
       <EntityTypeMapping TypeName="IsTypeOf(LogisticsModel.Cargo)">
-        <MappingFragment StoreEntitySet="CargoSet">
+        <MappingFragment StoreEntitySet="Cargos">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="CargoTitle" ColumnName="CargoTitle" />
-          <ScalarProperty Name="CargoSize" ColumnName="CargoSize" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="CarSet">
+    <EntitySetMapping Name="Cars">
       <EntityTypeMapping TypeName="IsTypeOf(LogisticsModel.Car)">
-        <MappingFragment StoreEntitySet="CarSet">
+        <MappingFragment StoreEntitySet="Cars">
           <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+          <ScalarProperty Name="Trips" ColumnName="Trips" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <AssociationSetMapping Name="CargoCar" TypeName="LogisticsModel.CargoCar" StoreEntitySet="Cars">
+      <EndProperty Name="Cargo">
+        <ScalarProperty Name="Id" ColumnName="Cargo_Id" />
+      </EndProperty>
+      <EndProperty Name="Car">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>
   </edmx:Runtime>
@@ -89,8 +133,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram Name="Model1" >
-        <EntityTypeShape EntityType="LogisticsModel.Cargo" Width="1.5" PointX="1.375" PointY="0.875" Height="1.59568359375" />
-        <EntityTypeShape EntityType="LogisticsModel.Car" Width="1.5" PointX="3.625" PointY="0.875" Height="1.4033821614583331" />
+        <EntityTypeShape EntityType="LogisticsModel.Cargo" Width="1.5" PointX="1.375" PointY="0.875" Height="1.787985026041667" />
+        <EntityTypeShape EntityType="LogisticsModel.Car" Width="1.5" PointX="3.625" PointY="0.875" Height="1.9802864583333339" />
+        <AssociationConnector Association="LogisticsModel.CargoCar">
+          <ConnectorPoint PointX="2.875" PointY="1.865143229166667" />
+          <ConnectorPoint PointX="3.625" PointY="1.865143229166667" />
+        </AssociationConnector>
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

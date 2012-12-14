@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 11/22/2012 14:38:05
+-- Date Created: 12/14/2012 03:30:06
 -- Generated from EDMX file: C:\Users\cruazer\Documents\Projects\cruazer-bsuir\RIS\Lab05\Lab05\LogisticsModel.edmx
 -- --------------------------------------------------
 
@@ -17,34 +17,41 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_CargoCar]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Cargos] DROP CONSTRAINT [FK_CargoCar];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
 -- --------------------------------------------------
 
-IF OBJECT_ID(N'[dbo].[CargoSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[CargoSet];
+IF OBJECT_ID(N'[dbo].[Cargos]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Cargos];
 GO
-IF OBJECT_ID(N'[dbo].[CarSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[CarSet];
+IF OBJECT_ID(N'[dbo].[Cars]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Cars];
 GO
 
 -- --------------------------------------------------
 -- Creating all tables
 -- --------------------------------------------------
 
--- Creating table 'CargoSet'
-CREATE TABLE [dbo].[CargoSet] (
+-- Creating table 'Cargos'
+CREATE TABLE [dbo].[Cargos] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [CargoTitle] nvarchar(max)  NOT NULL,
-    [CargoSize] int  NOT NULL
+    [Title] nvarchar(max)  NOT NULL,
+    [Size] int  NOT NULL,
+    [Price] float  NOT NULL
 );
 GO
 
--- Creating table 'CarSet'
-CREATE TABLE [dbo].[CarSet] (
+-- Creating table 'Cars'
+CREATE TABLE [dbo].[Cars] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Capacity] int  NOT NULL
+    [Name] nvarchar(max)  NOT NULL,
+    [Capacity] float  NOT NULL,
+    [Trips] int  NOT NULL,
+    [Cargo_Id] int  NOT NULL
 );
 GO
 
@@ -52,21 +59,35 @@ GO
 -- Creating all PRIMARY KEY constraints
 -- --------------------------------------------------
 
--- Creating primary key on [Id] in table 'CargoSet'
-ALTER TABLE [dbo].[CargoSet]
-ADD CONSTRAINT [PK_CargoSet]
+-- Creating primary key on [Id] in table 'Cargos'
+ALTER TABLE [dbo].[Cargos]
+ADD CONSTRAINT [PK_Cargos]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [Id] in table 'CarSet'
-ALTER TABLE [dbo].[CarSet]
-ADD CONSTRAINT [PK_CarSet]
+-- Creating primary key on [Id] in table 'Cars'
+ALTER TABLE [dbo].[Cars]
+ADD CONSTRAINT [PK_Cars]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
 -- --------------------------------------------------
 -- Creating all FOREIGN KEY constraints
 -- --------------------------------------------------
+
+-- Creating foreign key on [Cargo_Id] in table 'Cars'
+ALTER TABLE [dbo].[Cars]
+ADD CONSTRAINT [FK_CargoCar]
+    FOREIGN KEY ([Cargo_Id])
+    REFERENCES [dbo].[Cargos]
+        ([Id])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CargoCar'
+CREATE INDEX [IX_FK_CargoCar]
+ON [dbo].[Cars]
+    ([Cargo_Id]);
+GO
 
 -- --------------------------------------------------
 -- Script has ended
