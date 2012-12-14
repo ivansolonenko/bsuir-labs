@@ -46,7 +46,7 @@ public class EnterpriseBrowser {
   }
 
   public static void main(String[] args) {
-    proxy();
+    //proxy();
 
     try {
       HashMap<String, String> params = new HashMap<String, String>();

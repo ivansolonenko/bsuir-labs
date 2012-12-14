@@ -25,6 +25,7 @@ set classpath=.;./%PROJECT_CLASSES_1%;%AXIS_LIBS%\axis.jar;%AXIS_LIBS%\jaxrpc.ja
 set PATH=%JAVA_HOME%\bin;%PATH%
 set JPDA_ADDRESS=8084
 set JPDA_TRANSPORT=dt_socket
+mkdir %PROJECT_CLASSES_2%
 copy axis.war %CATALINA_APPS%
 cmd /c %CATALINA_HOME%\bin\catalina.bat jpda start
 ping 1.1.1.1 -n 1 -w 7000 > nul
