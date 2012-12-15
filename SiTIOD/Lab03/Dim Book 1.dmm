@@ -1,0 +1,187 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="1120928a-0936-4120-9451-3372992e6c73" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Book</ID>
+  <Name>Dim Book 1</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>MDXFilterComponent</Name>
+      <Value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;Filter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/SQLServer/reporting/QuerySpecification"&gt;&lt;FilterItems xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition" /&gt;&lt;/Filter&gt;</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="CubeDimensionBinding" dwd:design-time-name="019b25c1-ca25-41cb-bdb8-1deed5dedd41">
+    <DataSourceID>.</DataSourceID>
+    <CubeID>Lab03</CubeID>
+    <CubeDimensionID>Dim Book</CubeDimensionID>
+    <Filter></Filter>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="7f50e817-b141-42e9-abb8-fd89053392a7">
+      <ID>Id</ID>
+      <Name>Id</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="eae934e5-38a0-4df6-8582-9bc9e12bfbcc">
+        <CubeID>Lab03</CubeID>
+        <CubeDimensionID>Dim Book</CubeDimensionID>
+        <AttributeID>Id</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Key</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a67bc310-ba22-453a-8204-dbc478422600">
+      <ID>Books Of The Same Author</ID>
+      <Name>Books Of The Same Author</Name>
+      <Type>Long</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="55a9d08b-3f0e-4a18-babc-0786faeb2aa5">
+        <MeasureID>Books Of The Same Author</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="1ea322cf-7b12-4a35-bf0a-266f48714220">
+      <ID>Co Authors</ID>
+      <Name>Co Authors</Name>
+      <Type>Long</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="7fe85248-04de-4778-ba61-b282d2523a80">
+        <MeasureID>Co Authors</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="a08725a3-e952-47e9-bf9f-d8074a1698f2">
+      <ID>Discount</ID>
+      <Name>Discount</Name>
+      <Type>Long</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="88e0828c-e1bf-4c98-83db-caa10382bee0">
+        <MeasureID>Discount</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="fbb81337-0457-4d68-a078-a7eebe6f4e45">
+      <ID>Facts Count</ID>
+      <Name>Facts Count</Name>
+      <Type>Long</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="6b081c16-857b-4565-88be-1ecc85a91d26">
+        <MeasureID>Facts Count</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="c0a1576f-7324-4681-809a-50d09a2354d3">
+      <ID>Pages Ammount</ID>
+      <Name>Pages Ammount</Name>
+      <Type>Long</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="091e00e6-5f63-48de-942e-1ab4d33d647f">
+        <MeasureID>Pages Ammount</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="20c23aac-af7e-4029-bd6b-49c7370c1007">
+      <ID>Price</ID>
+      <Name>Price</Name>
+      <Type>Long</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="a7be5033-c889-45e3-bfd1-3df1a0a6a222">
+        <MeasureID>Price</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="574ec8da-dde3-4254-8832-93059786db0d">
+      <ID>Qty</ID>
+      <Name>Qty</Name>
+      <Type>Long</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="578c9f5b-8201-4939-954d-9d137ad135bd">
+        <MeasureID>Qty</MeasureID>
+      </Source>
+      <Content>Continuous</Content>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="b9daed40-f896-4d1b-8f7b-e8fa5a2fd18e">
+      <ID>Dim Book</ID>
+      <Name>Dim Book</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Clustering</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="8eb22d3d-ae21-440b-afb5-df48ba46ca51">
+          <ID>Id</ID>
+          <Name>Id</Name>
+          <SourceColumnID>Id</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="e2eb8012-92cc-49b4-8831-d588e844a2d4">
+          <ID>Books Of The Same Author</ID>
+          <Name>Books Of The Same Author</Name>
+          <SourceColumnID>Books Of The Same Author</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="1b988bc3-8e5d-4982-829c-d4eee0cceb0c">
+          <ID>Co Authors</ID>
+          <Name>Co Authors</Name>
+          <SourceColumnID>Co Authors</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="cc0d675c-7e77-4bf0-b95a-423803599ed5">
+          <ID>Discount</ID>
+          <Name>Discount</Name>
+          <SourceColumnID>Discount</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="42b4b6f3-978d-4cf4-9584-2328c361ed61">
+          <ID>Facts Count</ID>
+          <Name>Facts Count</Name>
+          <SourceColumnID>Facts Count</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="ec0bb94c-a75f-461f-9ae2-db6705b853b1">
+          <ID>Pages Ammount</ID>
+          <Name>Pages Ammount</Name>
+          <SourceColumnID>Pages Ammount</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="31c6dced-f1da-4ae7-9cf3-e65b6c396241">
+          <ID>Price</ID>
+          <Name>Price</Name>
+          <SourceColumnID>Price</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="e4ee328a-b264-4dcd-ad96-9483306875ca">
+          <ID>Qty</ID>
+          <Name>Qty</Name>
+          <SourceColumnID>Qty</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+</MiningStructure>

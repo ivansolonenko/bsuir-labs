@@ -1,0 +1,161 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6b1fb34e-5250-4934-a52d-7c04a8bd4064" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Book 1</ID>
+  <Name>Dim Book 3</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="CubeDimensionBinding" dwd:design-time-name="37a87bce-4991-40e0-97a8-ce680a8e18e4">
+    <DataSourceID>.</DataSourceID>
+    <CubeID>Lab03</CubeID>
+    <CubeDimensionID>Dim Book</CubeDimensionID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="42b20335-0206-4618-9a7a-62ac6db51cba">
+      <ID>Id</ID>
+      <Name>Id</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="6b2ab37e-bc0b-4f4f-8776-d2554fcf9609">
+        <CubeID>Lab03</CubeID>
+        <CubeDimensionID>Dim Book</CubeDimensionID>
+        <AttributeID>Id</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Key</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="4441f95c-38bc-44c3-94ad-2c4ba4ee9f59">
+      <ID>Country</ID>
+      <Name>Country</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="03f8684a-202a-49aa-a378-72ef18f0a644">
+        <CubeID>Lab03</CubeID>
+        <CubeDimensionID>Dim Book</CubeDimensionID>
+        <AttributeID>Country</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="5298e4f0-f1c8-45fb-9ed3-40bdbea27522">
+      <ID>Title</ID>
+      <Name>Title</Name>
+      <Type>Text</Type>
+      <Source xsi:type="CubeAttributeBinding" dwd:design-time-name="51212b94-963d-44e8-bfcd-ad1e9090533b">
+        <CubeID>Lab03</CubeID>
+        <CubeDimensionID>Dim Book</CubeDimensionID>
+        <AttributeID>Title</AttributeID>
+        <Type>All</Type>
+      </Source>
+      <Content>Discrete</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="c3617212-f2f5-458c-be20-3da78bbab302">
+      <ID>Discount</ID>
+      <Name>Discount</Name>
+      <Type>Long</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="3387d053-c9ae-409e-8903-15c5c29fcb1d">
+        <MeasureID>Discount</MeasureID>
+      </Source>
+      <Content>Discretized</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="69eefcf8-9806-4026-be03-e2f52cd07df9">
+      <ID>Price</ID>
+      <Name>Price</Name>
+      <Type>Long</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="6de6c446-09e2-4941-8c08-9c5a9ef94188">
+        <MeasureID>Price</MeasureID>
+      </Source>
+      <Content>Discretized</Content>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="8bc8c0ab-11ca-4198-841d-4b1249a2dd76">
+      <ID>Qty</ID>
+      <Name>Qty</Name>
+      <Type>Long</Type>
+      <Source xsi:type="MeasureBinding" dwd:design-time-name="60adf2df-82cf-493e-b1b7-05e8dc35a59b">
+        <MeasureID>Qty</MeasureID>
+      </Source>
+      <Content>Discretized</Content>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="30224754-7d8e-47fe-a756-84ce6af31f7e">
+      <ID>Dim Book 1</ID>
+      <Name>Dim Book 1</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Naive_Bayes</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="a11f80bb-f0dc-45d3-8b72-7f70689696eb">
+          <ID>Id</ID>
+          <Name>Id</Name>
+          <SourceColumnID>Id</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="3caf22bc-ed3b-4cc4-bb7a-075bccaac880">
+          <ID>Country</ID>
+          <Name>Country</Name>
+          <SourceColumnID>Country</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="82a8d00b-dccd-41c5-a1a8-e9efa16c9a48">
+          <ID>Title</ID>
+          <Name>Title</Name>
+          <SourceColumnID>Title</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="3254725f-1608-4b33-9d4e-c304d8cb0d03">
+          <ID>Discount</ID>
+          <Name>Discount</Name>
+          <SourceColumnID>Discount</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="4587968a-1fb7-47d0-af47-702d820a543a">
+          <ID>Price</ID>
+          <Name>Price</Name>
+          <SourceColumnID>Price</SourceColumnID>
+          <Usage>Predict</Usage>
+        </Column>
+        <Column dwd:design-time-name="9095aa89-0498-41ee-a15a-4b76858eaef3">
+          <ID>Qty</ID>
+          <Name>Qty</Name>
+          <SourceColumnID>Qty</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+</MiningStructure>
