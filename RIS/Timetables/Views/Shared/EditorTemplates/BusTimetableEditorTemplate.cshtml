@@ -1,0 +1,69 @@
+﻿@model Timetables.Models.BusTimetable
+<fieldset>
+	<legend>Bus Timetable</legend>
+	@Html.Hidden("__type__", Model.Type)
+	@Html.Hidden("Id", Model.Id)
+	<div class="editor-label">
+		@Html.LabelFor(model => model.RouteNumber)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.RouteNumber)
+		@Html.ValidationMessageFor(model => model.RouteNumber)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.DepartureDateTime)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.DepartureDateTime)
+		@Html.ValidationMessageFor(model => model.DepartureDateTime)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.DepartureStation)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.DepartureStation)
+		@Html.ValidationMessageFor(model => model.DepartureStation)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.DeparturePlatform)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.DeparturePlatform)
+		@Html.ValidationMessageFor(model => model.DeparturePlatform)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.DestinationCity)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.DestinationCity)
+		@Html.ValidationMessageFor(model => model.DestinationCity)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.DestinationStation)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.DestinationStation)
+		@Html.ValidationMessageFor(model => model.DestinationStation)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.TicketPrice)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.TicketPrice)
+		@Html.ValidationMessageFor(model => model.TicketPrice)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.BusBrand)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.BusBrand)
+		@Html.ValidationMessageFor(model => model.BusBrand)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.TripTime)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.TripTime)
+		@Html.ValidationMessageFor(model => model.TripTime)
+	</div>
+</fieldset>

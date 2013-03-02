@@ -1,0 +1,19 @@
+﻿@using Timetables.Common.Enums
+@using Timetables.Common.Interfaces;
+@model ICollection<ITimetable>
+@{
+	ViewBag.Header =
+	ViewBag.Title = "Welcome to Timetable Application";
+}
+<section>
+	<p>
+		@Html.ActionLink("Add Bus Timetable", "Add", new { type = TimetableTypes.BusTimetable }, new { @class = "btn" })
+		@Html.ActionLink("Add Plane Timetable", "Add", new { type = TimetableTypes.PlaneTimetable }, new { @class = "btn" })
+		@Html.ActionLink("Add Train Timetable", "Add", new { type = TimetableTypes.TrainTimetable }, new { @class = "btn" })
+	</p>
+	<p>
+	</p>
+	<p>
+		@Html.DisplayForModel("TimetablesListTemplate")
+	</p>
+</section>

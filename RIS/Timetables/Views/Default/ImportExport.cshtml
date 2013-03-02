@@ -1,0 +1,53 @@
+﻿@using Timetables.Common.Enums
+@{
+	ViewBag.Header =
+	ViewBag.Title = "Import/Export";
+}
+<section>
+	<div class="well">
+		@using (Html.BeginForm("Import", "Default", FormMethod.Post, new { enctype = "multipart/form-data" }))
+	{
+			<fieldset>
+				<legend>Import</legend>
+				<div class="editor-label">
+					File
+				</div>
+				<div class="editor-field">
+					<input type="file" name="fileContents" id="fileToImport" />
+				</div>
+				<div class="editor-label">
+					Type
+				</div>
+				<div class="editor-field">
+					@*<label>
+					<input type="radio" name="fileFormat" id="fileFormatCSV" value="@FileTypes.CSV" disabled="disabled"/>
+					<span>CSV</span>
+				</label>
+				<br />*@
+					<label>
+						<input type="radio" name="fileFormat" id="fileFormatJSON" value="@FileTypes.JSON" checked="checked"/>
+						<span>JSON</span>
+					</label>
+					@*<br />
+				<label>
+					<input type="radio" name="fileFormat" id="fileFormatXML" value="@FileTypes.XML" disabled="disabled"/>
+					<span>XML</span>
+				</label>*@
+				</div>
+				<div>
+					<input type="submit" value="Submit" />
+				</div>
+			</fieldset>
+	}
+	</div>
+	<div class="well">
+		<fieldset>
+			<legend>Export</legend>
+			<div class="editor-label">
+				@*@Html.ActionLink("CVS", "Export", new { exportFormat = FileTypes.CSV }, new { target = "_blank" })*@
+				@Html.ActionLink("JSON", "Export", new { exportFormat = FileTypes.JSON }, new { target = "_blank" })
+				@Html.ActionLink("XML", "Export", new { exportFormat = FileTypes.XML }, new { target = "_blank" })
+			</div>
+		</fieldset>
+	</div>
+</section>

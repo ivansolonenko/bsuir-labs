@@ -1,0 +1,68 @@
+﻿@using Timetables.Common.Interfaces;
+@model ICollection<ITimetable>
+@using (Html.BeginForm())
+{
+	<table class="table table-bordered table-condensed table-striped">
+		<tr>
+			<th>
+				Id
+			</th>
+			<th>
+				Type
+			</th>
+			<th>
+				Destination City
+			</th>
+			<th>
+				Departure Date/Time
+			</th>
+			<th>
+				Ticket Price
+			</th>
+			<th>
+				More Info
+			</th>
+			<th>
+				&nbsp;
+			</th>
+		</tr>
+		@if (Model.Count == 0)
+	{
+			<tr>
+				<td colspan="6">
+					No records found
+				</td>
+			</tr>
+	}
+		@foreach (var item in Model)
+	{
+			<tr>
+				<td>
+					@item.Id
+				</td>
+				<td>
+					@item.Type
+				</td>
+				<td>
+					@item.DestinationCity
+				</td>
+				<td>
+					@item.DepartureDateTime
+				</td>
+				<td>
+					@item.TicketPrice
+				</td>
+				<td>
+					@item.ToString()
+				</td>
+				<td>
+					@*
+					@Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn" })
+						@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey * / })
+						@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey * / })
+					*@
+				</td>
+			</tr>
+	}
+	</table>
+}

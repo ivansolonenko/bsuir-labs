@@ -1,0 +1,104 @@
+﻿@model Timetables.Models.PlaneTimetable
+<fieldset>
+	<legend>Plane Timetable</legend>
+	@Html.Hidden("__type__", Model.Type)
+	@Html.Hidden("Id", Model.Id)
+	<div class="editor-label">
+		@Html.LabelFor(model => model.FlightNumber)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.FlightNumber)
+		@Html.ValidationMessageFor(model => model.FlightNumber)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.CheckoutDeadlineTime)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.CheckoutDeadlineTime)
+		@Html.ValidationMessageFor(model => model.CheckoutDeadlineTime)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.DepartureDateTime)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.DepartureDateTime)
+		@Html.ValidationMessageFor(model => model.DepartureDateTime)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.DepartureAirport)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.DepartureAirport)
+		@Html.ValidationMessageFor(model => model.DepartureAirport)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.DepartureAirportDistanceFromCityCentre)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.DepartureAirportDistanceFromCityCentre)
+		@Html.ValidationMessageFor(model => model.DepartureAirportDistanceFromCityCentre)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.DestinationCity)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.DestinationCity)
+		@Html.ValidationMessageFor(model => model.DestinationCity)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.DestinationAirport)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.DestinationAirport)
+		@Html.ValidationMessageFor(model => model.DestinationAirport)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.NumberOfChanges)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.NumberOfChanges)
+		@Html.ValidationMessageFor(model => model.NumberOfChanges)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.TicketPrice)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.TicketPrice)
+		@Html.ValidationMessageFor(model => model.TicketPrice)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.TicketType)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.TicketType)
+		@Html.ValidationMessageFor(model => model.TicketType)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.Airline)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.Airline)
+		@Html.ValidationMessageFor(model => model.Airline)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.MaxLuggageWeight)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.MaxLuggageWeight)
+		@Html.ValidationMessageFor(model => model.MaxLuggageWeight)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.MaxCarryonWeight)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.MaxCarryonWeight)
+		@Html.ValidationMessageFor(model => model.MaxCarryonWeight)
+	</div>
+	<div class="editor-label">
+		@Html.LabelFor(model => model.ArrivalDateTime)
+	</div>
+	<div class="editor-field">
+		@Html.EditorFor(model => model.ArrivalDateTime)
+		@Html.ValidationMessageFor(model => model.ArrivalDateTime)
+	</div>
+</fieldset>

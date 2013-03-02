@@ -1,0 +1,34 @@
+﻿@using Timetables.Common.Interfaces
+@using Timetables.Models
+@model ITimetable
+@{
+	ViewBag.Header =
+	ViewBag.Title = "Add";
+}
+<section>
+	@using (Html.BeginForm())
+ {
+		<div>
+			<input class="btn btn-primary" type="submit" value="Save" />
+			@Html.ActionLink("Back to List", "Index", "Default", new { @class = "btn" })
+		</div>
+	
+		@Html.ValidationSummary(true)
+	 if (Model.GetType() == typeof(BusTimetable))
+	 {
+		@Html.EditorForModel("BusTimetableEditorTemplate")
+	 }
+	 else if (Model.GetType() == typeof(PlaneTimetable))
+	 {
+		@Html.EditorForModel("PlaneTimetableEditorTemplate")
+	 }
+	 else if (Model.GetType() == typeof(TrainTimetable))
+	 {
+		@Html.EditorForModel("TrainTimetableEditorTemplate")
+	 }
+	 else
+	 {
+		@Html.EditorForModel()
+	 }
+ }
+</section>

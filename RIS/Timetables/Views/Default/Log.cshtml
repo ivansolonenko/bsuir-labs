@@ -1,0 +1,14 @@
+﻿@model ICollection<string>
+@{
+	ViewBag.Header =
+	ViewBag.Title = "Log";
+}
+<section>
+	<pre>
+	@foreach (var item in Model)
+ {
+		@item
+		<br />
+ }
+</pre>
+</section>
