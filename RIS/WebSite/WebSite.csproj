@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B382583D-8A9B-4BFD-AF97-81CE76B9B649}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebSite</RootNamespace>
+    <AssemblyName>WebSite</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\slimbox2.css" />
+    <Content Include="css\style.css" />
+    <Content Include="images\closelabel.gif" />
+    <Content Include="images\contact.jpg" />
+    <Content Include="images\gallery\01-l.jpg" />
+    <Content Include="images\gallery\01.jpg" />
+    <Content Include="images\gallery\02-l.jpg" />
+    <Content Include="images\gallery\02.jpg" />
+    <Content Include="images\gallery\03-l.jpg" />
+    <Content Include="images\gallery\03.jpg" />
+    <Content Include="images\gallery\04-l.jpg" />
+    <Content Include="images\gallery\04.jpg" />
+    <Content Include="images\gallery\05-l.jpg" />
+    <Content Include="images\gallery\05.jpg" />
+    <Content Include="images\gallery\06-l.jpg" />
+    <Content Include="images\gallery\06.jpg" />
+    <Content Include="images\loading.gif" />
+    <Content Include="images\nextlabel.gif" />
+    <Content Include="images\prevlabel.gif" />
+    <Content Include="images\slider_nav_btn.jpg" />
+    <Content Include="images\templatemo_list.png" />
+    <Content Include="index.html" />
+    <Content Include="js\init.js" />
+    <Content Include="js\jquery.localscroll-min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.scrollTo-min.js" />
+    <Content Include="js\slimbox2.js" />
+    <Content Include="Web.config" />
+    <Content Include="works\kot\3D.png" />
+    <Content Include="works\kot\Детский рисунок.png" />
+    <Content Include="works\kot\монтаж4.jpg" />
+    <Content Include="works\kot\Ночной цветок.swf" />
+    <Content Include="works\kot\Открытка.png" />
+    <Content Include="works\kot\портрет2.jpg" />
+    <Content Include="works\kot\Снег.swf" />
+    <Content Include="works\kot\Старинные часы.swf" />
+    <Content Include="works\kot\фэнтэзи.jpg" />
+    <Content Include="works\krot\3d.jpg" />
+    <Content Include="works\krot\motion1.swf" />
+    <Content Include="works\krot\shape2.swf" />
+    <Content Include="works\krot\watch.swf" />
+    <Content Include="works\krot\Детский рисунок.jpg" />
+    <Content Include="works\krot\монтаж.jpg" />
+    <Content Include="works\krot\открытка.jpg" />
+    <Content Include="works\krot\ретушь.jpg" />
+    <Content Include="works\krot\фэнтази.jpg" />
+    <Content Include="works\naboko\1.swf" />
+    <Content Include="works\naboko\Анимация движения.swf" />
+    <Content Include="works\naboko\Анимация формы.swf" />
+    <Content Include="works\naboko\вп.png" />
+    <Content Include="works\naboko\Портрет.jpg" />
+    <Content Include="works\naboko\Рисунок21.png" />
+    <Content Include="works\naboko\Рисунок3д1.png" />
+    <Content Include="works\naboko\Фотомонтаж.jpg" />
+    <Content Include="works\naboko\Фэнтэзи.jpg" />
+    <Content Include="works\solonenko\Дерево.swf" />
+    <Content Include="works\solonenko\Детский рисунок.png" />
+    <Content Include="works\solonenko\Кораблик.swf" />
+    <Content Include="works\solonenko\монтаж.jpg" />
+    <Content Include="works\solonenko\Открытка.png" />
+    <Content Include="works\solonenko\портрет.jpg" />
+    <Content Include="works\solonenko\Трехмерный рисунок.png" />
+    <Content Include="works\solonenko\фэнтэзи.jpg" />
+    <Content Include="works\solonenko\Часы-сова.swf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57198</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
