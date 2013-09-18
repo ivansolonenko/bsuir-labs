@@ -39,7 +39,7 @@ namespace Lab01.Cryptography
 			public string ColumnsKey { get; set; }
 
 			[LocalizedCategory("Methods_Grid")]
-			[LocalizedDisplayName("GridSize")]
+			[LocalizedDisplayName("Grid_Size")]
 			public int GridSize { get; set; }
 
 			[LocalizedCategory("Methods_Grid")]

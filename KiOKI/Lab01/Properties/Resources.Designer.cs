@@ -97,7 +97,7 @@ namespace Lab01.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Text files (*.txt)|*.txt|All files (*.*)|*.*.
+        ///   Looks up a localized string similar to Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*.
         /// </summary>
         internal static string FileDialogFilter {
             get {
@@ -115,20 +115,29 @@ namespace Lab01.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to (ячейки выбраны).
+        /// </summary>
+        internal static string Grid_CellsSelected {
+            get {
+                return ResourceManager.GetString("Grid_CellsSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Выберите ячейки.
         /// </summary>
-        internal static string GridEditorForm_SelectCells {
+        internal static string Grid_SelectCells {
             get {
-                return ResourceManager.GetString("GridEditorForm_SelectCells", resourceCulture);
+                return ResourceManager.GetString("Grid_SelectCells", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Размер решетки.
         /// </summary>
-        internal static string GridSize {
+        internal static string Grid_Size {
             get {
-                return ResourceManager.GetString("GridSize", resourceCulture);
+                return ResourceManager.GetString("Grid_Size", resourceCulture);
             }
         }
         
@@ -201,6 +210,15 @@ namespace Lab01.Properties {
         internal static string NoFile {
             get {
                 return ResourceManager.GetString("NoFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to (не задано).
+        /// </summary>
+        internal static string NotSet {
+            get {
+                return ResourceManager.GetString("NotSet", resourceCulture);
             }
         }
         

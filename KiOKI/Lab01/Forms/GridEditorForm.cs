@@ -33,7 +33,7 @@ namespace Lab01.Forms
 		{
 			if (_selectedCellsCount != _requiredCellsCount)
 			{
-				MessageBox.Show(Resources.GridEditorForm_SelectCells);
+				MessageBox.Show(Resources.Grid_SelectCells);
 				return;
 			}
 

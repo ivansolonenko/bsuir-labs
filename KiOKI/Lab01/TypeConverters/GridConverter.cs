@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Globalization;
+using Lab01.Properties;
 
 namespace Lab01.TypeConverters
 {
@@ -9,12 +10,10 @@ namespace Lab01.TypeConverters
 		public override object ConvertTo(ITypeDescriptorContext context, CultureInfo culture, object value, Type destinationType)
 		{
 			if (value == null)
-				return "(null)";
+				return Resources.NotSet;
 
 			if (destinationType == typeof(string))
-			{
-				return value.ToString();
-			}
+				return Resources.Grid_CellsSelected;
 
 			return base.ConvertTo(context, culture, value, destinationType);
 		}

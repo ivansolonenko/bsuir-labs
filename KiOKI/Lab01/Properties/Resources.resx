@@ -162,19 +162,25 @@
   <data name="Key" xml:space="preserve">
     <value>Ключ</value>
   </data>
-  <data name="GridEditorForm_SelectCells" xml:space="preserve">
+  <data name="Grid_SelectCells" xml:space="preserve">
     <value>Выберите ячейки</value>
   </data>
   <data name="Grid" xml:space="preserve">
     <value>Решетка</value>
   </data>
-  <data name="GridSize" xml:space="preserve">
+  <data name="Grid_Size" xml:space="preserve">
     <value>Размер решетки</value>
   </data>
   <data name="FileDialogDefaultExtension" xml:space="preserve">
     <value>*.txt</value>
   </data>
   <data name="FileDialogFilter" xml:space="preserve">
-    <value>Text files (*.txt)|*.txt|All files (*.*)|*.*</value>
+    <value>Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*</value>
+  </data>
+  <data name="Grid_CellsSelected" xml:space="preserve">
+    <value>(ячейки выбраны)</value>
+  </data>
+  <data name="NotSet" xml:space="preserve">
+    <value>(не задано)</value>
   </data>
 </root>
