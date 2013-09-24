@@ -183,4 +183,7 @@
   <data name="NotSet" xml:space="preserve">
     <value>(не задано)</value>
   </data>
+  <data name="EncryptionMethod" xml:space="preserve">
+    <value>Метод шифрования</value>
+  </data>
 </root>

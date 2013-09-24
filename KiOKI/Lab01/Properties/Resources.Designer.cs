@@ -88,6 +88,15 @@ namespace Lab01.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Метод шифрования.
+        /// </summary>
+        internal static string EncryptionMethod {
+            get {
+                return ResourceManager.GetString("EncryptionMethod", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to *.txt.
         /// </summary>
         internal static string FileDialogDefaultExtension {
