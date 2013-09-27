@@ -49,12 +49,12 @@ namespace Lab01.Cryptography
 			public bool[][] GridBoolChecked { get; set; }
 
 			[LocalizedCategory("Methods_Caesar")]
-			//[DisplayName("CaesarValue")]
-			public int CaesarValue { get; set; }
+			[LocalizedDisplayName("Key")]
+			public int CaesarK { get; set; }
 
 			[LocalizedCategory("Methods_Caesar")]
-			//[DisplayName("CaesarNValue")]
-			public int CaesarNValue { get; set; }
+			[LocalizedDisplayName("AlphabethLength")]
+			public int CaesarN { get; set; }
 		}
 
 		internal CryptoManagerSettings Settings { get; private set; }
@@ -94,8 +94,8 @@ namespace Lab01.Cryptography
 				{
 					RailwayFenceKey = 4,
 					ColumnsKey = Guid.NewGuid().ToString("N"),
-					CaesarValue = 0,
-					CaesarNValue = 0,
+					CaesarK = 0,
+					CaesarN = 65536,
 					GridSize = 4,
 					GridBoolChecked = null
 				};
@@ -142,7 +142,7 @@ namespace Lab01.Cryptography
 		private IEncryptionMethod GetEncryptionMethod(Type type)
 		{
 			if (type == typeof(CaesarMethod))
-				return new CaesarMethod(Settings.CaesarValue, Settings.CaesarNValue);
+				return new CaesarMethod(Settings.CaesarK, Settings.CaesarN);
 
 			if (type == typeof(GridMethod))
 				return new GridMethod(Settings.GridSize, Settings.GridBoolChecked);

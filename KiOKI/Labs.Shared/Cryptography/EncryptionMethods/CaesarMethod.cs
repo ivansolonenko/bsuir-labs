@@ -4,13 +4,13 @@ namespace Labs.Shared.Cryptography.EncryptionMethods
 {
 	public class CaesarMethod : IEncryptionMethod
 	{
-		private readonly int _value;
-		private readonly int _nvalue;
+		private readonly int _k;
+		private readonly int _n;
 
-		public CaesarMethod(int value, int nvalue)
+		public CaesarMethod(int k, int n)
 		{
-			_value = value;
-			_nvalue = nvalue;
+			_k = k;
+			_n = n;
 		}
 
 		public string Encrypt(string input)
@@ -19,7 +19,7 @@ namespace Labs.Shared.Cryptography.EncryptionMethods
 
 			for (int i = 0; i < buf.Length; i++)
 			{
-				buf[i] = (char)((buf[i] + _value) % _nvalue);
+				buf[i] = (char)((buf[i] + _k) % _n);
 			}
 
 			return new string(buf);
@@ -31,7 +31,7 @@ namespace Labs.Shared.Cryptography.EncryptionMethods
 
 			for (int i = 0; i < buf.Length; i++)
 			{
-				buf[i] = (char)((buf[i] - _value) % _nvalue);
+				buf[i] = (char)((buf[i] - _k) % _n);
 			}
 
 			return new string(buf);

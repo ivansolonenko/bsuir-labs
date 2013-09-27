@@ -186,4 +186,7 @@
   <data name="EncryptionMethod" xml:space="preserve">
     <value>Метод шифрования</value>
   </data>
+  <data name="AlphabethLength" xml:space="preserve">
+    <value>Длина алфавита</value>
+  </data>
 </root>

@@ -61,6 +61,15 @@ namespace Lab01.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Длина алфавита.
+        /// </summary>
+        internal static string AlphabethLength {
+            get {
+                return ResourceManager.GetString("AlphabethLength", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Закрыть.
         /// </summary>
         internal static string Close {
